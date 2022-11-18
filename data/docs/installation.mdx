@@ -1,0 +1,54 @@
+---
+title: Installation
+category: Getting Started
+index: 10
+description: How to install CSS Components and get up and running.
+---
+
+### Install CSS Components
+
+Install CSS Components from your terminal via npm or yarn.
+
+```bash
+# With npm
+npm install @phntms/css-components
+
+# With yarn
+yarn add @phntms/css-components
+```
+
+### Import it
+
+Import `styled` from `@phntms/css-components`.
+
+```js
+import { styled } from "@phntms/css-components";
+```
+
+### Use it
+
+Use the `styled` function to create a component and add styles to it.
+
+```jsx line=3-5
+import { styled } from "@phntms/css-components";
+
+const Button = styled("button", {
+  css: "root",
+});
+```
+
+### Render it
+
+Finally, render the component.
+
+<Preview>
+  <DemoButton>Button</DemoButton>
+</Preview>
+
+```jsx line=5
+import { styled } from '@phntms/css-components';
+
+const Button = styled('button', {...});
+
+() => <Button>Button</Button>;
+```

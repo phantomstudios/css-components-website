@@ -1,0 +1,38 @@
+ul.HeroFeaturesWrapper {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul.HeroFeaturesWrapper li {
+  display: flex;
+  max-width: 300px;
+}
+
+ul.HeroFeaturesWrapper a {
+  margin: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  max-width: 300px;
+}
+
+ul.HeroFeaturesWrapper a:hover,
+ul.HeroFeaturesWrapper a:focus,
+ul.HeroFeaturesWrapper a:active {
+  color: #0070f3;
+  border-color: #0070f3;
+}
+
+ul.HeroFeaturesWrapper a h2 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+}
+
+ul.HeroFeaturesWrapper a p {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}

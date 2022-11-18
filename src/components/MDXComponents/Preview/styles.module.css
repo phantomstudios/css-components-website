@@ -1,0 +1,9 @@
+div.PreviewWrapper {
+  margin: 0;
+  overflow: auto;
+  box-shadow: 0 0 0 1px #ff000088;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 16px;
+  position: relative;
+}
