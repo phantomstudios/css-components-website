@@ -13,6 +13,8 @@ Install CSS Components from your terminal via npm or yarn.
 # With npm
 npm install @phntms/css-components
 
+const bla = () => {}
+
 # With yarn
 yarn add @phntms/css-components
 ```
@@ -21,7 +23,7 @@ yarn add @phntms/css-components
 
 Import `styled` from `@phntms/css-components`.
 
-```js
+```tsx
 import { styled } from "@phntms/css-components";
 ```
 
@@ -29,7 +31,7 @@ import { styled } from "@phntms/css-components";
 
 Use the `styled` function to create a component and add styles to it.
 
-```jsx line=3-5
+```tsx
 import { styled } from "@phntms/css-components";
 
 const Button = styled("button", {
@@ -45,7 +47,7 @@ Finally, render the component.
   <DemoButton>Button</DemoButton>
 </Preview>
 
-```jsx line=5
+```tsx
 import { styled } from '@phntms/css-components';
 
 const Button = styled('button', {...});

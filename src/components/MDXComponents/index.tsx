@@ -9,6 +9,7 @@
 // import { Pre } from './Pre';
 // import { BenchmarkChart } from './BenchmarkChart';
 
+import Code from "./Code";
 import DemoButton from "./DemoButton";
 import Preview from "./Preview";
 
@@ -84,6 +85,14 @@ export const components = {
   //   </DS.Box>
   // ),
   // pre: ({ children }) => <>{children}</>,
+  // code: ({ className, children, id, showLineNumbers = false, collapsed = false }) => {
+  code: (props: { className?: string, children: string }) => {
+    const { className, children } = props;
+    const isInlineCode = !className;
+    if (isInlineCode) return <code>{children}</code>;
+    const language = className ? className.replace("language-", "") : "tsx";
+    return <Code language={language}>{children}</Code>;
+  },
   // code: ({ className, children, id, showLineNumbers = false, collapsed = false }) => {
   //   const isInlineCode = !className;
 
