@@ -19,10 +19,14 @@ export default async function Docs({ params }: Props) {
   if (!doc) return notFound();
   const Component = getMDXComponent(doc.code);
 
+  const {
+    frontmatter: { title, description },
+  } = doc;
+
   return (
     <main className={styles.main}>
-      <h1 className={styles.title}>{doc.frontmatter.title}</h1>
-      {doc.frontmatter.description && <p>{doc.frontmatter.description}</p>}
+      <h1 className={styles.title}>{title}</h1>
+      {doc.frontmatter.description && <p>{description}</p>}
       <Component components={components} />
     </main>
   );
