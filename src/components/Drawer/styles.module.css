@@ -5,7 +5,7 @@ div.DrawerWrapper {
   left: 0;
   width: 256px;
   height: 100%;
-  background-color: green;
   z-index: 100;
-  /* opacity: 0.6; */
+  border-right: 1px solid #eee;
+  padding: 32px;
 }

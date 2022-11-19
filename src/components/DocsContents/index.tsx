@@ -2,25 +2,26 @@ import Link from "next/link";
 
 import { getAllDocsCategories } from "@/content";
 
-import { DocsContentsWrapper } from "./styles";
+import { Categories } from "./styles";
+import { Docs } from "./styles";
 
 const DocsContents = () => {
   const categories = getAllDocsCategories();
   return (
-    <DocsContentsWrapper>
+    <Categories>
       {categories.map((category, i) => (
         <li key={i}>
           <h2>{category.title}</h2>
-          <ul>
+          <Docs>
             {category.docs.map((doc, i) => (
               <li key={i}>
                 <Link href={`/docs/${doc.slug}`}>{doc.title}</Link>
               </li>
             ))}
-          </ul>
+          </Docs>
         </li>
       ))}
-    </DocsContentsWrapper>
+    </Categories>
   );
 };
 
