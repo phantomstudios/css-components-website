@@ -1,6 +1,6 @@
 "use client";
 
-import style from "react-syntax-highlighter/dist/cjs/styles/prism/material-dark";
+import style from "react-syntax-highlighter/dist/cjs/styles/prism/material-light";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 
 import { CodeWrapper } from "./styles";

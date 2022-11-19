@@ -1,9 +1,8 @@
 div.Container {
-  padding: 0 2rem;
+  padding: 32px 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 div.Container_sideBar_true {
