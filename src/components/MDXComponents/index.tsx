@@ -9,11 +9,12 @@
 // import { Pre } from './Pre';
 // import { BenchmarkChart } from './BenchmarkChart';
 
-import Code from "./Code";
-import DemoButton from "./DemoButton";
-import Preview from "./Preview";
+import { MDXComponents } from "mdx/types";
 
-export const components = {
+import Preview from "./Preview";
+import DemoButton from "./DemoButton";
+import Code from "./Code";
+export const components: MDXComponents = {
   // ...DS,
   // BenchmarkChart,
   // h1: (props) => (
@@ -86,12 +87,12 @@ export const components = {
   // ),
   // pre: ({ children }) => <>{children}</>,
   // code: ({ className, children, id, showLineNumbers = false, collapsed = false }) => {
-  code: (props: { className?: string, children: string }) => {
+  code: (props) => {
     const { className, children } = props;
     const isInlineCode = !className;
     if (isInlineCode) return <code>{children}</code>;
     const language = className ? className.replace("language-", "") : "tsx";
-    return <Code language={language}>{children}</Code>;
+    return <Code language={language}>{children as string}</Code>;
   },
   // code: ({ className, children, id, showLineNumbers = false, collapsed = false }) => {
   //   const isInlineCode = !className;
@@ -228,7 +229,9 @@ export const components = {
   //   />
   // ),
   DemoButton,
-  Preview: (props: any) => <Preview {...props} />,
+  Preview: (props: React.ComponentProps<typeof Preview>) => (
+    <Preview {...props} />
+  ),
   // RegisterLink: ({ id, index, href }) => {
   //   const isExternal = href.startsWith('http');
 

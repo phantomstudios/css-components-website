@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import HeroFeatures from '../components/HeroFeatures'
-import styles from './page.module.css'
+import HeroFeatures from "@/components/HeroFeatures";
+
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
@@ -10,10 +10,11 @@ export default function Home() {
           Componentize your CSS styles the right way
         </h1>
         <p className={styles.description}>
-          CSS-in-JS with near-zero runtime, SSR, multi-variant support, and a best-in-class developer experience.
+          CSS-in-JS with near-zero runtime, SSR, multi-variant support, and a
+          best-in-class developer experience.
         </p>
         <HeroFeatures />
       </main>
     </div>
-  )
+  );
 }

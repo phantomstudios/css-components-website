@@ -1,11 +1,12 @@
+import path from "path";
 import fs from "fs";
-import path from 'path';
-import glob from 'glob';
-import matter from 'gray-matter';
 
-import type { Frontmatter } from '../types/frontmatter';
 import { bundleMDX } from "mdx-bundler";
-import { sortByIndex } from '../utils/array';
+import matter from "gray-matter";
+import glob from "glob";
+
+import { sortByIndex } from "@/utils/array";
+import type { Frontmatter } from "@/types/frontmatter";
 
 export interface Category {
   title: string;
@@ -13,29 +14,31 @@ export interface Category {
 }
 
 const ROOT_PATH = process.cwd();
-export const DATA_PATH = path.join(ROOT_PATH, 'data');
+export const DATA_PATH = path.join(ROOT_PATH, "data");
 
 export const getAllFrontmatter = (fromPath: string) => {
   const PATH = path.join(DATA_PATH, fromPath);
   const paths = glob.sync(`${PATH}/**/*.mdx`);
 
-  return paths.map((filePath) => {
-    const source = fs.readFileSync(path.join(filePath), 'utf8');
-    const { data, content } = matter(source);
+  return paths
+    .map((filePath) => {
+      const source = fs.readFileSync(path.join(filePath), "utf8");
+      const { data } = matter(source);
+      // const { data, content } = matter(source);
 
-    return {
-      ...(data as Frontmatter),
-      slug: path.basename(filePath).replace('.mdx', ''),
-    };
-  }).sort(sortByIndex);
+      return {
+        ...(data as Frontmatter),
+        slug: path.basename(filePath).replace(".mdx", ""),
+      };
+    })
+    .sort(sortByIndex);
 };
 
-
 export const getAllDocsCategories = () => {
-  const docs = getAllFrontmatter('docs');
+  const docs = getAllFrontmatter("docs");
 
   return docs.reduce((acc, doc) => {
-    const category = doc.category || 'Other';
+    const category = doc.category || "Other";
     const foundCategory = acc.find((cat) => cat.title === category);
 
     if (foundCategory) {
@@ -50,19 +53,15 @@ export const getAllDocsCategories = () => {
   }, [] as Category[]);
 };
 
-
-
-
-
-
-
-
 export const getMdxBySlug = async (basePath: string, slug: string) => {
   // console.log("HERE!!!!", basePath, slug);
   const mdxPath = path.join(DATA_PATH, basePath, `${slug}.mdx`);
   if (!fs.existsSync(mdxPath)) return;
 
-  const source = fs.readFileSync(path.join(DATA_PATH, basePath, `${slug}.mdx`), 'utf8');
+  const source = fs.readFileSync(
+    path.join(DATA_PATH, basePath, `${slug}.mdx`),
+    "utf8"
+  );
   // const { frontmatter, code } = await bundleMDX(source, {
   //   xdmOptions(input, options) {
   //     options.remarkPlugins = [...(options.remarkPlugins ?? []), remarkSlug];

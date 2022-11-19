@@ -1,10 +1,12 @@
 "use server";
 
 import { notFound } from "next/navigation";
-import { getMDXComponent } from 'mdx-bundler/client';
-import { getAllFrontmatter, getMdxBySlug } from '../../../content';
-import styles from '../../page.module.css'
-import { components } from "../../../components/MDXComponents";
+import { getMDXComponent } from "mdx-bundler/client";
+
+import { getAllFrontmatter, getMdxBySlug } from "@/content";
+import { components } from "@/components/MDXComponents";
+
+import styles from "../../page.module.css";
 
 interface Props {
   params: {
@@ -13,7 +15,7 @@ interface Props {
 }
 
 export default async function Docs({ params }: Props) {
-  const doc = await getMdxBySlug('docs', params.slug);
+  const doc = await getMdxBySlug("docs", params.slug);
   if (!doc) return notFound();
   const Component = getMDXComponent(doc.code);
 
@@ -23,11 +25,11 @@ export default async function Docs({ params }: Props) {
       {doc.frontmatter.description && <p>{doc.frontmatter.description}</p>}
       <Component components={components} />
     </main>
-  )
+  );
 }
 
 export async function generateStaticParams() {
-  const docs = getAllFrontmatter('docs');
+  const docs = getAllFrontmatter("docs");
 
   return docs.map((doc) => ({
     slug: doc.slug,
