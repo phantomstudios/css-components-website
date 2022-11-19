@@ -1,6 +1,8 @@
 import Link from "next/link";
-import { getAllDocsCategories } from "../../content";
-import { HeroFeaturesWrapper } from "./styles"
+
+import { getAllDocsCategories } from "@/content";
+
+import { HeroFeaturesWrapper } from "./styles";
 
 const categories = getAllDocsCategories();
 const first = categories[0].docs[0];
@@ -15,20 +17,22 @@ const features = [
     title: "Bla",
     description: "GitHub",
     link: "/",
-  }
+  },
 ];
 
 const HeroFeatures = () => {
-  return (<HeroFeaturesWrapper>
-    {features.map((feature, i) => (
-      <li key={i}>
-        <Link href={feature.link}>
-          <h2>{feature.title}</h2>
-          <p>{feature.description}</p>
-        </Link>
-      </li>
-    ))}
-  </HeroFeaturesWrapper>);
-}
+  return (
+    <HeroFeaturesWrapper>
+      {features.map((feature, i) => (
+        <li key={i}>
+          <Link href={feature.link}>
+            <h2>{feature.title}</h2>
+            <p>{feature.description}</p>
+          </Link>
+        </li>
+      ))}
+    </HeroFeaturesWrapper>
+  );
+};
 
 export default HeroFeatures;

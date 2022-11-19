@@ -1,11 +1,11 @@
-import { PreviewWrapper } from "./styles"
+import { PreviewWrapper } from "./styles";
 
 interface Props {
-    children?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Preview = ({ children }: Props) => {
-    return <PreviewWrapper>{children}</PreviewWrapper>;
-}
+  return <PreviewWrapper>{children}</PreviewWrapper>;
+};
 
 export default Preview;
