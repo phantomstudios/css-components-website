@@ -1,3 +1,24 @@
-ul.DocsContentsWrapper {
-  background-color: bisque;
+ul.Categories {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.Categories > li {
+  padding: 0 0 1em 0;
+}
+
+ul.Categories > li h2 {
+  font-weight: 500;
+  font-size: inherit;
+  margin: 0 0 1em 0;
+}
+
+ul.Docs {
+  list-style-type: none;
+  padding: 0;
+  font-size: 13px;
+}
+
+ul.Docs li {
+  margin-bottom: 1em;
 }

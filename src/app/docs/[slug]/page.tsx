@@ -5,6 +5,7 @@ import { getMDXComponent } from "mdx-bundler/client";
 
 import { getAllFrontmatter, getMdxBySlug } from "@/content";
 import { components } from "@/components/MDXComponents";
+import { Container } from "@/app/styles";
 
 import styles from "../../page.module.css";
 
@@ -24,11 +25,11 @@ export default async function Docs({ params }: Props) {
   } = doc;
 
   return (
-    <main className={styles.main}>
+    <Container sideBar>
       <h1 className={styles.title}>{title}</h1>
       {doc.frontmatter.description && <p>{description}</p>}
       <Component components={components} />
-    </main>
+    </Container>
   );
 }
 
