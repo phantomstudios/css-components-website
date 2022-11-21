@@ -1,0 +1,182 @@
+---
+title: Variants
+description: Stitches supports a first-class variant API.
+category: Getting Started
+index: 12
+---
+
+### Adding variants
+
+You can add variants by using the `variants` config object key. There is no limit to how many variants you can add.
+
+<Preview>
+  <div style={{ display: "flex", gap: "20px" }}>
+    <DemoButton color="violet">Violet Button</DemoButton>
+    <DemoButton color="gray">Gray Button</DemoButton>
+  </div>
+</Preview>
+
+```jsx line=4-20,23
+const Button = styled("button", {
+  css: "baseButton",
+  variants: {
+    color: {
+      violet: "violet",
+      gray: "gray",
+    },
+  },
+});
+
+() => <Button color="violet">Button</Button>;
+```
+
+A variant accepts the same style object as the [base styles](/docs/styling).
+
+### Multiple variants
+
+<Preview>
+  <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
+    <DemoButton color="gray" size="small" />
+    <DemoButton color="violet" size="small" />
+    <DemoButton color="gray" size="large" />
+    <DemoButton color="violet" size="large" />
+  </div>
+</Preview>
+
+```jsx line=4-23,26-30
+const Button = styled("button", {
+  // base styles
+
+  variants: {
+    color: {
+      violet: { ...violetStyles },
+      gray: { ...grayStyles },
+    },
+    size: {
+      small: {
+        fontSize: "13px",
+        height: "25px",
+        paddingRight: "10px",
+        paddingLeft: "10px",
+      },
+      large: {
+        fontSize: "15px",
+        height: "35px",
+        paddingLeft: "15px",
+        paddingRight: "15px",
+      },
+    },
+  },
+});
+
+() => (
+  <Button color="violet" size="large">
+    Button
+  </Button>
+);
+```
+
+### Boolean variants
+
+Variants can be booleans by using `true` as the key.
+
+<Preview>
+  <DemoButton outlined />
+</Preview>
+
+```jsx line=4-10,13
+const Button = styled("button", {
+  // base styles
+
+  variants: {
+    outlined: {
+      true: {
+        borderColor: "lightgray",
+      },
+    },
+  },
+});
+
+() => <Button outlined>Button</Button>;
+```
+
+### Compound variants
+
+In the case of needing to set styles of a variant, based on a combination of other variants, you can use the `compoundVariants` feature.
+
+<Preview>
+  <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
+    <DemoButton color="violet" outlined />
+    <DemoButton color="gray" outlined />
+  </div>
+</Preview>
+
+```jsx line=13-35,38
+const Button = styled("button", {
+  ...styles,
+
+  variants: {
+    color: {
+      violet: { ...violetStyles },
+      gray: { ...grayStyles },
+    },
+    outlined: {
+      true: { ...outlineVariants },
+    },
+  },
+
+  compoundVariants: [
+    {
+      color: "violet",
+      outlined: true,
+      css: {
+        color: "blueviolet",
+        borderColor: "darkviolet",
+        "&:hover": {
+          color: "white",
+        },
+      },
+    },
+    {
+      color: "gray",
+      outlined: true,
+      css: {
+        color: "gray",
+        borderColor: "lightgray",
+        "&:hover": {
+          color: "black",
+        },
+      },
+    },
+  ],
+});
+
+() => (
+  <Button color="violet" outlined>
+    Button
+  </Button>
+);
+```
+
+### Default variants
+
+You can use the `defaultVariants` feature to set a variant by default:
+
+```jsx line=11-13,16
+const Button = styled('button', {
+  ...styles
+
+  variants: {
+    color: {
+      violet: { ...violetStyles },
+      gray: { ...grayStyles }
+    },
+  },
+
+  defaultVariants: {
+    color: 'violet'
+  }
+});
+
+() => <Button>Button</Button>
+```
