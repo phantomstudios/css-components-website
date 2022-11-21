@@ -1,11 +1,9 @@
 import { DemoButtonWrapper } from "./styles";
 
-interface Props {
-  children?: React.ReactNode;
-}
+type Props = React.ComponentProps<typeof DemoButtonWrapper>;
 
-const DemoButton = ({ children }: Props) => {
-  return <DemoButtonWrapper>{children}</DemoButtonWrapper>;
+const DemoButton = ({ children = "Demo Button", ...rest }: Props) => {
+  return <DemoButtonWrapper {...rest}>{children}</DemoButtonWrapper>;
 };
 
 export default DemoButton;

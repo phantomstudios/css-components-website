@@ -1,54 +1,33 @@
 ---
 title: API
-category: Overview
-index: 2
 description: The nuts and bolts of CSS Components' API.
+category: Overview
+index: 3
 ---
 
-### Install CSS Components
+## styled
 
-Install CSS Components from your terminal via npm or yarn.
+A function to create a component including its styles and variants. It receives:
 
-```bash
-# With npm
-npm install @phntms/css-components
+- `element` or `component`: a HTML element (`div`) or a React Component (`Component`)
+- `config`: an object with the following properties:
+  - `base`: an css class with the base styles
+  - `variants`: an object with the variants styles
+  - `defaultVariants`: an array with the default variants
+  - `compoundVariants`: an array with the compound variants
 
-# With yarn
-yarn add @phntms/css-components
-```
-
-### Import it
-
-Import `styled` from `@phntms/css-components`.
-
-```js
-import { styled } from "@phntms/css-components";
-```
-
-### Use it
-
-Use the `styled` function to create a component and add styles to it.
-
-```jsx line=3-5
-import { styled } from "@phntms/css-components";
-
-const Button = styled("button", {
-  css: "root",
+```jsx
+const Button = styled('button', {
+  css: "baseStyle"
+  variants: {
+    variant: {
+      primary: "primaryStyle",
+      secondary: "secondaryStyle",
+    },
+  },
 });
-```
 
-### Render it
-
-Finally, render the component.
-
-Preview>
-DemoButton />
-/Preview>
-
-```jsx line=5
-import { styled } from '@phntms/css-components';
-
-const Button = styled('button', {...});
-
-() => <Button>Button</Button>;
+// Use it
+<Button>Button</Button>
+<Button variant="primary">Primary button</Button>
 ```

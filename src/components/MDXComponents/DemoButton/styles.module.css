@@ -1,3 +1,59 @@
 button.DemoButtonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: olive;
+  border: none;
+  border-radius: 4px;
+
+  font-size: 16px;
+  padding: 12px 16px;
+}
+
+button.colorViolet {
+  color: white;
+  background-color: blueviolet;
+}
+
+button.colorViolet:hover {
+  background-color: darkviolet;
+}
+
+button.colorGray {
+  background-color: gainsboro;
+}
+
+button.colorGray:hover {
+  background-color: lightgray;
+}
+
+button.sizeSmall {
+  font-size: 12px;
+}
+
+button.sizeLarge {
+  font-size: 18px;
+}
+
+button.outlined {
+  border: 2px solid black;
+  background-color: transparent;
+}
+
+button.colorOutlinedViolet {
+  color: blueviolet;
+  border-color: darkviolet;
+}
+
+button.colorOutlinedViolet:hover {
+  color: white;
+}
+
+button.colorOutlinedGray {
+  color: gray;
+  border-color: lightgray;
+}
+
+button.colorOutlinedGray:hover {
+  color: black;
 }
