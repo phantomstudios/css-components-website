@@ -2,121 +2,66 @@
 title: Introduction
 category: Overview
 index: 1
-description: The what and the why of Stitches.
+description: The what and the why of CSS Components.
 ---
 
 CSS Components is a lightweight, performant styling library with a focus on component architecture and developer experience.
 
+At Phantom we are huge fans of CSS-in-JS. We use it for all of our projects, and we love the flexibility and power it gives us. However, we have found that it can be challenging to use with the latest innovations with React, specifically [Server Components](https://beta.nextjs.org/docs/rendering/server-and-client-components) and Next.js 13. The current alternative is to use other more traditional CSS styling techniques. We have found the developer experience to be lacking, and even simple components littered with ugly computed `classNames`.
+
+This library is heavily inspired by [Stitches](https://stitches.dev/), and is for the mostpart, a direct port of the core functionality. CSS Components is not a whole styling system or library. It is a simple utility to wrap your CSS into React components, and provide a simple and familiar API for using them.
+
 ---
 
-## Performance
+## Highlights
 
-### Near-Zero Runtime
+### Familiar Experience
 
-At Modulz, performance is paramount. So when designing Stitches, performance was a top priority.
+If you have used [Stiches](https://stitches.dev/) or [styled-components](https://styled-components.com) you will feel at home.
 
-Stitches avoids unnecessary prop interpolations at runtime, making it significantly more performant than other styling libraries.
+The concept of variants are exactly the same. CSS Components essentially modernises the traditional CSS authoring pipeline and provies a great developer experience.
 
-Both `@stitches/core` and `@stitches/react` libraries weigh in at ~6kb gzipped.
+### Server Components
 
-### Server-Side Rendering
+Many UI libraries do not support [Server Components](https://beta.nextjs.org/docs/rendering/server-and-client-components) and more traditional CSS techniques are needed.
 
-Many UI libraries document that responsive variants don't work with server-side rendering. Since popular frameworks like [Next.js](https://nextjs.org/) and [Gatsby](https://www.gatsbyjs.com/) have begun prioritising SSR, we wanted a solution that works well.
-
-Stitches supports cross-browser [server-side rendering](/docs/server-side-rendering), even for responsive styles and variants.
+CSS Components woorks flawlessly with Server Components and works alogside your traditional CSS system (e.g. CSS Modules).
 
 ## Key Features
 
 ### Variants
 
-Stitches introduces [variants](/docs/variants) as a first-class citizen, so you can design composable component APIs.
+Cribbed from Stitches, [variants](/docs/variants) is a first-class citizen, so you can design composable component APIs.
 
 You can define a single variant, multiple variants, and even [compound variants](/docs/variants#compound-variants) which allow you to define styles based on a combination of variants.
 
 Variants can be applied conditionally or responsively.
 
-### Tokens
+### CLI Tools
 
-One of the most exciting features is the ability to define your own [tokens](/docs/tokens) and seamlessly apply them as CSS values. CSS Properties are automatically mapped to token scales. Tokens can even be used in shorthand CSS properties.
+[CLI Tools](/docs/cli) Allows you to run a simple command to scan your codebase for css files and automagically generate the corresponding React components.
 
-### Theming
-
-Stitches provides a simple [theming](/docs/theming) experience out of the box. Create as many themes as you need, and apply them wherever you want. Each theme generates a CSS class name which overrides the default tokens.
-
-```jsx
-const darkTheme = createTheme({
-  colors: {
-    hiContrast: "hsl(206,2%,93%)",
-    loContrast: "hsl(206,8%,8%)",
-
-    gray100: "hsl(206,8%,12%)",
-    gray200: "hsl(206,7%,14%)",
-    gray300: "hsl(206,7%,15%)",
-    gray400: "hsl(206,7%,24%)",
-    gray500: "hsl(206,7%,30%)",
-    gray600: "hsl(206,5%,53%)",
-  },
-  space: {},
-  fonts: {},
-});
-```
-
-### Utils
-
-[Utils](/docs/utils) allow you to create your own custom CSS Properties, with your own API.
-
-Use utils to create powerful combinations of properties, property aliases and to introduce restrictions when needed.
-
-```jsx
-export const { styled, css } = createStitches({
-  utils: {
-    marginX: (value) => ({
-      marginLeft: value,
-      marginRight: value,
-    }),
-    marginY: (value) => ({
-      marginTop: value,
-      marginBottom: value,
-    }),
-  },
-});
-```
-
-### Responsive Variants
-
-Stitches lets you configure [breakpoints](/docs/responsive-styles) and apply variants responsively using the `css` prop. CSS at-rules can also be used inline if needed.
-
-```jsx
-export const { styled, css } = createStitches({
-  media: {
-    bp1: "(min-width: 640px)",
-    bp2: "(min-width: 768px)",
-    bp3: "(min-width: 1024px)",
-    bp4: "(min-width: 1280px)",
-  },
-});
+```bash
+npx css-components --css ./src/**/*.css --output styles.ts
 ```
 
 ### Overrides
 
-Stitches provides a `css` prop for overriding styles on any Stitches component. You can use this prop to define layout concerns and/or [overrides](/docs/overriding-styles). Tokens and breakpoints also work in the `css` prop.
+CSS Components internally rides on the `className` prop but respects any classNames you pass in.
 
 ```jsx
-<Button css={{ backgroundColor: "red" }}>Button</Button>
+<Button style={{ backgroundColor: "red" }}>Button</Button>
 ```
 
-Stitches also provides a polymorphic `as` prop for defining which tag a component renders.
+You can also pass in a className and CSS component will pass it through along with its internal styles.
 
 ```jsx
-<Text as="h1">Heading</Text>
-<Text as="p">Paragraph</Text>
+<Text className="massive">Heading</Text>
 ```
 
 ### Developer Experience
 
 One of our main goals is to provide the best possible developer experience. Stitches provides a fully-typed API, so when using TypeScript, CSS properties, values, and breakpoints will be auto-completed for you.
-
-Also, when using the `as` prop, the prop suggestions will update.
 
 ---
 
