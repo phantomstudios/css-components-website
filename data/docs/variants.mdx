@@ -16,13 +16,13 @@ You can add variants by using the `variants` config object key. There is no limi
   </div>
 </Preview>
 
-```jsx line=4-20,23
+```jsx
 const Button = styled("button", {
   css: "baseButton",
   variants: {
     color: {
-      violet: "violet",
-      gray: "gray",
+      violet: "colorViolet",
+      gray: "colorGray",
     },
   },
 });
@@ -30,7 +30,7 @@ const Button = styled("button", {
 () => <Button color="violet">Button</Button>;
 ```
 
-A variant accepts the same style object as the [base styles](/docs/styling).
+A variant accepts the same css style object as the [base styles](/docs/styling).
 
 ### Multiple variants
 
@@ -43,28 +43,17 @@ A variant accepts the same style object as the [base styles](/docs/styling).
   </div>
 </Preview>
 
-```jsx line=4-23,26-30
+```jsx
 const Button = styled("button", {
-  // base styles
-
+  css: "baseButton",
   variants: {
     color: {
-      violet: { ...violetStyles },
-      gray: { ...grayStyles },
+      violet: "colorViolet",
+      gray: "colorGray",
     },
     size: {
-      small: {
-        fontSize: "13px",
-        height: "25px",
-        paddingRight: "10px",
-        paddingLeft: "10px",
-      },
-      large: {
-        fontSize: "15px",
-        height: "35px",
-        paddingLeft: "15px",
-        paddingRight: "15px",
-      },
+      small: "sizeSmall",
+      large: "sizeLarge",
     },
   },
 });
@@ -84,15 +73,13 @@ Variants can be booleans by using `true` as the key.
   <DemoButton outlined />
 </Preview>
 
-```jsx line=4-10,13
+```jsx
 const Button = styled("button", {
   // base styles
 
   variants: {
     outlined: {
-      true: {
-        borderColor: "lightgray",
-      },
+      true: "outlined",
     },
   },
 });
@@ -113,15 +100,14 @@ In the case of needing to set styles of a variant, based on a combination of oth
 
 ```jsx line=13-35,38
 const Button = styled("button", {
-  ...styles,
-
+  css: "baseButton",
   variants: {
     color: {
-      violet: { ...violetStyles },
-      gray: { ...grayStyles },
+      violet: "colorViolet",
+      gray: "colorGray",
     },
     outlined: {
-      true: { ...outlineVariants },
+      true: "outlined",
     },
   },
 
@@ -129,24 +115,12 @@ const Button = styled("button", {
     {
       color: "violet",
       outlined: true,
-      css: {
-        color: "blueviolet",
-        borderColor: "darkviolet",
-        "&:hover": {
-          color: "white",
-        },
-      },
+      css: "colorOutlinedViolet",
     },
     {
       color: "gray",
       outlined: true,
-      css: {
-        color: "gray",
-        borderColor: "lightgray",
-        "&:hover": {
-          color: "black",
-        },
-      },
+      css: "colorOutlinedGray",
     },
   ],
 });
@@ -162,21 +136,26 @@ const Button = styled("button", {
 
 You can use the `defaultVariants` feature to set a variant by default:
 
-```jsx line=11-13,16
-const Button = styled('button', {
-  ...styles
+<Preview>
+  <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
+    <DemoButton />
+  </div>
+</Preview>
 
+```jsx
+const Button = styled("button", {
+  css: "baseButton",
   variants: {
     color: {
-      violet: { ...violetStyles },
-      gray: { ...grayStyles }
+      violet: "colorViolet",
+      gray: "colorGray",
     },
   },
 
   defaultVariants: {
-    color: 'violet'
-  }
+    color: "violet",
+  },
 });
 
-() => <Button>Button</Button>
+() => <Button>Button</Button>;
 ```

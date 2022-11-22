@@ -14,6 +14,7 @@ import { MDXComponents } from "mdx/types";
 import Preview from "./Preview";
 import DemoButton from "./DemoButton";
 import Code from "./Code";
+import CheckoutButton from "./CheckoutButton/index";
 export const components: MDXComponents = {
   // ...DS,
   // BenchmarkChart,
@@ -229,6 +230,7 @@ export const components: MDXComponents = {
   //   />
   // ),
   DemoButton,
+  CheckoutButton,
   Preview: (props: React.ComponentProps<typeof Preview>) => (
     <Preview {...props} />
   ),
