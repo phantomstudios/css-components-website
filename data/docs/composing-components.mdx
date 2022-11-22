@@ -8,20 +8,19 @@ index: 15
 Stitches components can be composed via the `styled` function.
 
 <Preview>
-  <DemoButton />
-  <CheckoutButton />
+  <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
+    <DemoButton>Base Button</DemoButton>
+    <CheckoutButton>Checkout Button</CheckoutButton>
+  </div>
 </Preview>
 
 ```jsx
-const BaseButton = styled("button", {});
+const BaseButton = styled("button", {
+  css: "baseButton",
+});
 
 const CheckoutButton = styled(BaseButton, {
-  borderRadius: 0,
-  backgroundColor: "hotpink",
-  color: "white",
-  "&:hover": {
-    backgroundColor: "deeppink",
-  },
+  css: "checkoutButton"",
 });
 
 () => (
@@ -36,38 +35,26 @@ When you compose a component which has variants, they will be inherited.
 
 <Preview>
   <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
-    <DemoButton children="Base button" size="small" />
-    <CheckoutButton size="small" />
-    <DemoButton children="Base button" size="large" />
-    <DemoButton
-      children="Checkout button"
-      css={{
-        borderRadius: 0,
-        backgroundColor: "$pink10",
-        color: "white",
-        "&:hover": {
-          backgroundColor: "$pink11",
-        },
-      }}
-      size="large"
-    />
+    <DemoButton size="small">Base Button</DemoButton>
+    <CheckoutButton size="small">Checkout Button</CheckoutButton>
+    <DemoButton size="large">Base Button</DemoButton>
+    <CheckoutButton size="large">Checkout Button</CheckoutButton>
   </div>
 </Preview>
 
 ```jsx
 const BaseButton = styled("button", {
-  // base styles
-
+  css: "baseButton",
   variants: {
     size: {
-      small: {},
-      large: {},
+      small: "smallButton",
+      large: "largeButton",
     },
   },
 });
 
 const CheckoutButton = styled(BaseButton, {
-  // checkout styles
+  css: "checkoutButton",
 });
 
 () => (
