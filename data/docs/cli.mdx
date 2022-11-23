@@ -1,6 +1,149 @@
 ---
 title: CLI
-description: How to automatically generate components.
+description: How CSS Components automatically generates components.
 category: Advanced
 index: 31
 ---
+
+CSS Components provides a command line interface (CLI) to generate components. As long as your CSS files conform to a specific naming convention, you can generate components and all of the variant configuration automatically.
+
+## Running the CLI
+
+The CLI can scan your project for CSS files and generate components for each file found using a GLOB pattern.
+
+For demonstration purposes we will use the following file structure:
+
+```tree
+    src
+    └── components
+        ├── button
+        │   ├── index.ts
+        │   └── styles.module.css
+        └── card
+            ├── index.ts
+            └── styles.module.css
+```
+
+If the tool is installed, to run the tool just run:
+
+```bash
+    npx css-components --css "src/components/**/*.css" --output styles.ts
+```
+
+This will create 2 new files in each of the component folders:
+
+```tree
+    src
+    └── components
+        ├── button
+        │   ├── index.ts
+        │   ├── styles.module.css
+        │   └── styles.ts
+        └── card
+            ├── index.ts
+            ├── styles.module.css
+            └── styles.ts
+```
+
+## Naming Convention
+
+Following the naming convention below will allow the CLI to generate components automatically.
+
+### Basics (element and component name)
+
+For each style declaration, at a minimum you need to specify both the element type and class name.
+
+The example below creates a new React Component called `CheckoutButton` which is a `button` DOM element.
+
+```css
+button.CheckoutButton {
+  color: gray;
+}
+```
+
+### Variants
+
+You can add variants to your component by suffixing the class name with `_variant_value`. The example below creates a component with `big` and `theme` variants:
+
+```css
+button.CheckoutButton {
+  color: gray;
+}
+
+button.CheckoutButton_big_true {
+  font-size: 32px;
+}
+
+button.CheckoutButton_theme_primary {
+  color: blue;
+}
+
+button.CheckoutButton_theme_secondary {
+  color: teal;
+}
+```
+
+You can use this component like so:
+
+```tsx
+import { CheckoutButton } from "./styles";
+
+const Page = () => (
+  <div>
+    <CheckoutButton>Click Me</CheckoutButton>
+    <CheckoutButton big>Click Me</CheckoutButton>
+    <CheckoutButton theme="primary">Click Me</CheckoutButton>
+    <CheckoutButton theme="secondary">Click Me</CheckoutButton>
+  </div>
+);
+```
+
+### Default Variants
+
+You can specify a default variant by suffixing the class name with `_default`. The example below creates a component with a `theme` variant defaulting to `primary`:
+
+```css
+h1.Title {
+  font-size: 16px;
+  color: gray;
+}
+
+h1.Title_theme_primary_default {
+  color: blue;
+}
+
+h1.Title_theme_secondary {
+  color: teal;
+}
+```
+
+### Compound Variants
+
+You can also create compound variants by combining multiple variants. The example shows a button which has special styling applied when both the `big` and `theme` variants are set to certain combinations.
+
+```css
+button.Button {
+  color: gray;
+}
+
+button.Button_big_true {
+  font-size: 32px;
+}
+
+button.Button_theme_primary {
+  color: blue;
+}
+
+button.Button_theme_secondary {
+  color: teal;
+}
+
+/* These two styles get applied under certain combinations of variants */
+button.Button_big_true_theme_primary {
+  border: 1px solid blue;
+}
+
+button.Button_big_true_theme_secondary {
+  border: 1px solid blue;
+}
+```
