@@ -15,9 +15,10 @@ import Preview from "./Preview";
 import DemoButton from "./DemoButton";
 import Code from "./Code";
 import CheckoutButton from "./CheckoutButton/index";
+import { BenchmarkChart } from "./BenchmarkChart";
 export const components: MDXComponents = {
   // ...DS,
-  // BenchmarkChart,
+  BenchmarkChart,
   // h1: (props) => (
   //   <DS.Text {...props} as="h1" size="8" css={{ fontWeight: 500, mb: '$2', lineHeight: '40px' }} />
   // ),

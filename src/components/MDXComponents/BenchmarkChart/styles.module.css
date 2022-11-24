@@ -1,0 +1,30 @@
+div.Chart {
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+  
+
+}
+
+div.Row {
+  display: flex;
+  flex-direction: row;
+  background-color: antiquewhite;
+}
+
+div.Title {
+  background-color: aquamarine;
+  width: 256px;
+}
+
+div.BarContainer {
+  background-color: azure;
+  flex-grow: 1;
+}
+
+div.Bar {
+  /* background-color: beige; */
+  width: 50%;
+  height: 16px;
+  border-radius: 4px;
+}
