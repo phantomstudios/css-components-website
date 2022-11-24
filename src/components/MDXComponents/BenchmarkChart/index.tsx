@@ -1,4 +1,4 @@
-import { Bar, BarContainer, Chart, Row, Title } from "./styles";
+import { Bar, BarContainer, Chart, Label, Row, Title } from "./styles";
 
 export interface BenchmarkIndicator {
   name: string;
@@ -8,17 +8,13 @@ export interface BenchmarkIndicator {
 const getBarColor = (name: string) => {
   switch (name) {
     case "CSS Components":
-      return "violet";
+      return "#e76f51";
     case "Stitches":
-      return "red";
-    case "Stitches 0.2.0":
-      return "orange";
-    case "Stitches 0.1.9":
-      return "yellow";
+      return "#e9c46a";
     case "styled-components":
-      return "blue";
+      return "#2a9d8f";
     case "Emotion":
-      return "green";
+      return "#264653";
     default:
       return "gray";
   }
@@ -35,16 +31,16 @@ export function BenchmarkChart({ data }: Props) {
     <Chart>
       {data.map((row) => (
         <Row key={row.name}>
-          <Title>
-            {row.name} : {row.value}ms
-          </Title>
+          <Title>{row.name}</Title>
           <BarContainer>
             <Bar
               style={{
                 width: `${(row.value / maxValue) * 100}%`,
                 backgroundColor: getBarColor(row.name),
               }}
-            />
+            >
+              <Label>{row.value}ms</Label>
+            </Bar>
           </BarContainer>
         </Row>
       ))}
