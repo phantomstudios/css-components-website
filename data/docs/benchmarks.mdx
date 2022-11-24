@@ -1,0 +1,112 @@
+---
+title: Benchmarks
+description: Performance tests and comparisons.
+category: Advanced
+index: 40
+---
+
+## The tests
+
+We've put together a test suite to test a range of perfomance factors across multiple CSS-in-JS libraries and CSS Components.
+
+All tests use object notation. All tests were run in a production environment, on a machine with the following spec:
+
+- Macbook Pro 2022
+- Apple M1 Max
+- 32GB LPDDR5
+
+Just like CSS Components, our [benchmark tests](https://github.com/phntms/css-components-bench) are also open-source.
+
+### Initial injection
+
+The timing that it takes apply the initial styles. This happens when a component is rendered.
+
+{
+
+<BenchmarkChart
+  data={[
+    { name: "CSS Components", value: 0.0042 },
+    { name: "Emotion", value: 0.0709 },
+    { name: "Stitches", value: 0.0771 },
+    { name: "styled-components", value: 0.1015 },
+  ]}
+/>
+}
+
+### Updating variants
+
+Changing the variants is now faster than ever. Since we are just witching classNames.
+
+{
+
+<BenchmarkChart
+  data={[
+    { name: "CSS Components", value: 0.0047 },
+    { name: "Stitches", value: 0.0148 },
+    { name: "Emotion", value: 0.029 },
+    { name: "styled-components", value: 0.0361 },
+  ]}
+/>
+}
+
+> Note: Since styled-components and Emotion don't offer a first-class variant API, this was done via prop interpolation.
+
+### Updating `style` or `css` prop
+
+The `style` or `css` is the best way to handle dynamic styles. This needs to happen fast - and it does!
+
+{
+
+<BenchmarkChart
+  data={[
+    { name: "CSS Components", value: 0.0065 },
+    { name: "Stitches", value: 0.015 },
+    { name: "Emotion", value: 0.0666 },
+    { name: "styled-components", value: 0.1333 },
+  ]}
+/>
+}
+
+> Note: Since css-components don't offer a first-class `css` prop, we are comparing against standard the `style` prop.
+
+### Mounting deep tree
+
+In this test, we mount a tree with many nested nodes.
+
+{
+
+<BenchmarkChart
+  data={[
+    { name: "CSS Components", value: 1.7666 },
+    { name: "Stitches", value: 2.1333 },
+    { name: "Emotion", value: 3.6333 },
+    { name: "styled-components", value: 4.0193 },
+  ]}
+/>
+}
+
+> Note: This test was taken from the [styled-components benchmarks](https://github.com/styled-components/styled-components/tree/main/packages/benchmarks). Emotion also tests against this.
+
+### Mount wide tree
+
+In this test, we mount a tree with many sibling nodes.
+
+{
+
+<BenchmarkChart
+  data={[
+    { name: "CSS Components", value: 3.08 },
+    { name: "Stitches", value: 3.6366 },
+    { name: "styled-components", value: 5.898 },
+    { name: "Emotion", value: 6.036 },
+  ]}
+/>
+}
+
+> Note: This test was taken from the [styled-components benchmarks](https://github.com/styled-components/styled-components/tree/main/packages/benchmarks). Emotion also tests against this.
+
+## Summary
+
+Our benchmarks compare against Stitches, styled-components and Emotion because they're the most popular CSS-in-JS libraries, and they've pushed us to improve our performance. Our goal with these benchmarks is to provide transparent performance comparisons for the community.
+
+If you'd like us to include your CSS-in-JS library, or think the tests could be improved, please [open an issue](https://github.com/phntms/css-components-bench).
