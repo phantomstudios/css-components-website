@@ -17,3 +17,7 @@ export const BarContainer = styled("div", {
 export const Bar = styled("div", {
   css: css.Bar,
 });
+
+export const Label = styled("div", {
+  css: css.Label,
+});

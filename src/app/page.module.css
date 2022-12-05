@@ -1,5 +1,4 @@
 div.Container {
-  padding: 32px 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,24 +9,22 @@ div.Container_sideBar_true {
 }
 
 main.Hero {
-  padding: 4rem 0;
-  flex: 1;
+  padding: 4em;
   display: flex;
+  gap: 4rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: var(--color-fg);
+  color: var(--color-bg);
 }
 
 main.Hero h1 {
-  margin: 0;
-  font-size: 59px;
+  font-size: 4em;
   font-style: normal;
-  font-weight: 500;
-}
-
-main.Hero h1 {
-  text-decoration: none;
   text-align: center;
+  text-decoration: none;
+  margin: 0;
 }
 
 main.Hero h1 a:hover,
@@ -37,10 +34,37 @@ main.Hero h1 a:active {
 }
 
 main.Hero p {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 21px;
-  color: #777;
-  max-width: 640px;
   text-align: center;
+  color: var(--color-bg);
+  opacity: 0.5;
+  margin: 0;
+}
+
+main.Hero ul {
+  margin: 0;
+  /* margin-top: 2em; */
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 1rem;
+}
+
+main.Hero ul li a {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  border-radius: 1rem;
+  font-weight: bold;
+  transition: color 1s ease;
+}
+
+main.Hero ul li a:hover {
+  color: var(--color-blue);
+  transition: color 100ms ease;
+}
+
+main.Hero ul li a svg {
+  margin-right: 0.5rem;
 }

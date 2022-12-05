@@ -1,0 +1,7 @@
+:root, *::after, *::before {
+  --color-fg: black;
+  --color-bg: white;
+  --color-grey: #ddd;
+  --color-blue: #0070f3;
+  --color-brand: #ee5511;
+}

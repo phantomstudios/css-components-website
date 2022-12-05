@@ -1,0 +1,38 @@
+div.CodeExampleWrapper {
+  display: flex;
+}
+
+ul.CodeSections {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.CodeSection {
+  padding: 0;
+  padding: 1rem;
+  margin: 0 -1rem;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+li.CodeSection:hover {
+  transform: translate(0, -0.1rem);
+  border-color: var(--color-grey);
+}
+
+li.CodeSection_active_true {
+  border-color: var(--color-blue) !important;
+}
+
+li.CodeSection h3 {
+  margin: 0;
+}
+
+li.CodeSection p {
+  margin: 0;
+}
