@@ -1,6 +1,6 @@
 import { GoArrowRight, GoMarkGithub } from "react-icons/go";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 import { getAllDocsCategories } from "@/content";
 import HeroFeatures from "@/components/HeroFeatures";
