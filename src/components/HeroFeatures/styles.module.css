@@ -5,6 +5,7 @@ ul.HeroFeaturesWrapper {
   display: grid;
   gap: 4rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 1rem;
 }
 
 @media (min-width: 968px) {

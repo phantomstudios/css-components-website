@@ -1,5 +1,6 @@
 div.CodeExampleWrapper {
   display: flex;
+  padding: 1rem;
 }
 
 ul.CodeSections {
