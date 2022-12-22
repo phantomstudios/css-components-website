@@ -2,8 +2,15 @@ ul.HeroFeaturesWrapper {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: grid;
   gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (min-width: 968px) {
+  ul.HeroFeaturesWrapper {
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  }
 }
 
 ul.HeroFeaturesWrapper li {
