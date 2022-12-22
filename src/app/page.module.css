@@ -20,11 +20,17 @@ main.Hero {
 }
 
 main.Hero h1 {
-  font-size: 4em;
+  font-size: 2rem;
   font-style: normal;
   text-align: center;
   text-decoration: none;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  main.Hero h1 {
+    font-size: 4rem;
+  }
 }
 
 main.Hero h1 a:hover,
