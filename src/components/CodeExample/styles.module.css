@@ -1,6 +1,8 @@
 div.CodeExampleWrapper {
   display: flex;
   padding: 1rem;
+  flex-direction: column;
+  margin: 1.5rem 0 1rem;
 }
 
 ul.CodeSections {
@@ -10,6 +12,18 @@ ul.CodeSections {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  div.CodeExampleWrapper {
+    flex-direction: row;
+    margin: 3rem 0 2rem;
+  }
+
+  ul.CodeSections {
+    padding-right: 0;
+  }
 }
 
 li.CodeSection {
@@ -19,6 +33,7 @@ li.CodeSection {
   border-radius: 0.5rem;
   border: 2px solid transparent;
   transition: all 0.2s ease-in-out;
+  width: 100%;
 }
 
 li.CodeSection:hover {

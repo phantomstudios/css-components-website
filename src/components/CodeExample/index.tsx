@@ -83,9 +83,7 @@ const CodeExample = () => {
               active={activeSection === i}
               onClick={() => setActiveSection(i)}
             >
-              <h3>
-                {title} = {activeSection === i && "(selected)"}
-              </h3>
+              <h3>{title}</h3>
               <p>{description}</p>
             </CodeSection>
           ))}

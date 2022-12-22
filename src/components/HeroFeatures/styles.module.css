@@ -1,6 +1,6 @@
 ul.HeroFeaturesWrapper {
   list-style-type: none;
-  margin: 0;
+  margin: 2rem 0;
   padding: 0;
   display: grid;
   gap: 4rem;
@@ -20,16 +20,17 @@ ul.HeroFeaturesWrapper li {
   flex-direction: column;
   /* max-width: 300px; */
   transition: color 0.15s ease, border-color 0.15s ease;
+  padding: 0 1rem;
 }
 
 ul.HeroFeaturesWrapper h2 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 ul.HeroFeaturesWrapper p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
