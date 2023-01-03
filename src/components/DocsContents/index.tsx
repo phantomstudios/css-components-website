@@ -1,12 +1,11 @@
 import Link from "next/link";
 
-import { getAllDocsCategories } from "@/content";
+import { Category } from "@/content";
 
 import { Categories } from "./styles";
 import { Docs } from "./styles";
 
-const DocsContents = () => {
-  const categories = getAllDocsCategories();
+const DocsContents = ({ categories }: { categories: Category[] }) => {
   return (
     <Categories>
       {categories.map((category, i) => (

@@ -1,4 +1,5 @@
-import Drawer from "@/components/Drawer";
+import { getAllDocsCategories } from "@/content";
+import DocsNav from "@/components/DocsNav";
 import DocsContents from "@/components/DocsContents";
 
 export default function RootLayout({
@@ -6,11 +7,13 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const categories = getAllDocsCategories();
+
   return (
     <>
-      <Drawer>
-        <DocsContents />
-      </Drawer>
+      <DocsNav>
+        <DocsContents categories={categories} />
+      </DocsNav>
       {children}
     </>
   );

@@ -1,5 +1,5 @@
 main.DocWrapper {
-  /* background-color: orange; */
+  padding: 0 2rem 1rem;
 }
 
 main.DocWrapper h1, main.DocWrapper h2, main.DocWrapper h3, main.DocWrapper h4 {
@@ -43,4 +43,11 @@ p.Description {
   font-weight: 400;
   color: #777;
   /* font-weight: 500; */
+}
+
+@media (min-width: 768px) {
+  main.DocWrapper {
+    padding: 1rem 6rem 1rem 2rem;
+    margin-top: 1.5rem;
+  }
 }

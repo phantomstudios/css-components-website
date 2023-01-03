@@ -1,0 +1,45 @@
+div.DocsNavWrapper {
+  display: none;
+  padding: 0 32px 32px;
+  background-color: white;
+}
+
+div.DocsNavClosed {
+  display: block;
+}
+
+button.DocsNavToggle {
+  height: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+div.DocsNavTopbar {
+  height: 4rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  div.DocsNavWrapper {
+    display: block;
+    position: fixed;
+    padding: 32px;
+    top: 0;
+    left: 0;
+    width: 256px;
+    height: 100%;
+    z-index: 100;
+    border-right: 1px solid #eee;
+  }
+
+  div.DocsNavTopbar {
+    display: none;
+  }
+}
