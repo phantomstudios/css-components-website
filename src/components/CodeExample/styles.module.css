@@ -19,6 +19,12 @@ ul.CodeSections {
   div.CodeExampleWrapper {
     flex-direction: row;
     margin: 3rem 0 2rem;
+    padding: 1rem 4rem;
+    gap: 2rem;
+  }
+  
+  div.CodeExampleWrapper h2 {
+    margin-top: 0;
   }
 
   ul.CodeSections {
