@@ -25,5 +25,5 @@ ul.Docs li {
 }
 
 ul.Docs li:hover {
-  transform: translateX(1px);
+  transform: translateX(2px);
 }
