@@ -21,4 +21,9 @@ ul.Docs {
 
 ul.Docs li {
   margin-bottom: 1em;
+  transition: transform 150ms ease-in-out;
+}
+
+ul.Docs li:hover {
+  transform: translateX(1px);
 }

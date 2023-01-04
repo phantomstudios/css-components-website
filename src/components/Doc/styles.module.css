@@ -10,17 +10,14 @@ main.DocWrapper h1, main.DocWrapper h2, main.DocWrapper h3, main.DocWrapper h4 {
 main.DocWrapper h1 {
   font-size: 35px;
   margin: 0 0 0.25em 0;
-  /* font-weight: 500; */
 }
 
 main.DocWrapper h2 {
   font-size: 27px;
-  /* font-weight: 500; */
 }
 
 main.DocWrapper h3 {
   font-size: 19px;
-  /* font-weight: 500; */
 }
 
 main.DocWrapper hr {
@@ -29,20 +26,17 @@ main.DocWrapper hr {
   border: none;
   background-color: #eee;
   height: 1px;
-  /* font-weight: 500; */
 }
 
 main.DocWrapper p {
   font-size: 17px;
   color: #333;
-  /* font-weight: 500; */
 }
 
 p.Description {
   font-size: 21px;
   font-weight: 400;
   color: #777;
-  /* font-weight: 500; */
 }
 
 @media (min-width: 768px) {

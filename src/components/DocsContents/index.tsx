@@ -1,8 +1,6 @@
-import Link from "next/link";
-
 import { Category } from "@/content";
 
-import { Categories } from "./styles";
+import { Categories, DocLink } from "./styles";
 import { Docs } from "./styles";
 
 const DocsContents = ({ categories }: { categories: Category[] }) => {
@@ -14,7 +12,7 @@ const DocsContents = ({ categories }: { categories: Category[] }) => {
           <Docs>
             {category.docs.map((doc, i) => (
               <li key={i}>
-                <Link href={`/docs/${doc.slug}`}>{doc.title}</Link>
+                <DocLink href={`/docs/${doc.slug}`}>{doc.title}</DocLink>
               </li>
             ))}
           </Docs>
