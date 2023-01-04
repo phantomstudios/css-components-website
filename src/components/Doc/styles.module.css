@@ -39,9 +39,16 @@ p.Description {
   color: #777;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   main.DocWrapper {
     padding: 1rem 6rem 1rem 2rem;
     margin: 1.5rem 0 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  main.DocWrapper {
+    padding: 1rem 0 1rem 4rem;
+    width: 75%;
   }
 }
