@@ -20,11 +20,21 @@ main.Hero {
 }
 
 main.Hero h1 {
-  font-size: 4em;
+  font-size: 2.5rem;
   font-style: normal;
   text-align: center;
   text-decoration: none;
   margin: 0;
+}
+
+@media (min-width: 768px) {
+  main.Hero h1 {
+    font-size: 4rem;
+  }
+
+  main.Hero {
+    padding: 10em 4em;
+  }
 }
 
 main.Hero h1 a:hover,
@@ -38,6 +48,8 @@ main.Hero p {
   color: var(--color-bg);
   opacity: 0.5;
   margin: 0;
+  position: relative;
+  top: -1rem;
 }
 
 main.Hero ul {

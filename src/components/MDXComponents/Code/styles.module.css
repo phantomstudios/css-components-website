@@ -9,4 +9,11 @@ div.CodeWrapper {
 
 div.CodeWrapper pre {
   margin: 0 !important;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  div.CodeWrapper {
+    margin-left: 1rem;
+  }
 }
