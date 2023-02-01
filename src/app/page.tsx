@@ -3,6 +3,7 @@ import Link from "next/link";
 // import Image from "next/image";
 
 import { getAllDocsCategories } from "@/content";
+import Stats from "@/components/Stats";
 import HeroFeatures from "@/components/HeroFeatures";
 import CodeExample from "@/components/CodeExample";
 
@@ -47,25 +48,7 @@ export default function Home() {
       </Hero>
       <CodeExample />
       <HeroFeatures />
-      <h2>Stats at a glance</h2>
-      <ul>
-        <li>
-          <h3>Bundle Size</h3>
-          <p>2.3kb</p>
-        </li>
-        <li>
-          <h3>Bundle Size (GZIP)</h3>
-          <p>961b</p>
-        </li>
-        <li>
-          <h3>Runtime interpolations</h3>
-          <p>Zero</p>
-        </li>
-        <li>
-          <h3>Variants</h3>
-          <p>∞</p>
-        </li>
-      </ul>
+      <Stats />
     </Container>
   );
 }
