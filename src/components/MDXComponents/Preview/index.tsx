@@ -1,10 +1,8 @@
+import { ParentProps } from "@/types/base";
+
 import { PreviewWrapper } from "./styles";
 
-interface Props {
-  children?: React.ReactNode;
-}
-
-const Preview = ({ children }: Props) => {
+const Preview = ({ children }: ParentProps) => {
   return <PreviewWrapper>{children}</PreviewWrapper>;
 };
 

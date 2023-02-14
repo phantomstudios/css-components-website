@@ -16,14 +16,6 @@ export default function Home() {
   return (
     <Container>
       <Hero>
-        {/* <Image
-          src="/logo.svg"
-          alt="CSS Components"
-          width={128}
-          height={128}
-          unoptimized
-        /> */}
-
         <h1>Componentize your CSS styles the right way</h1>
         <p>
           Not another styling system, but a lightweight utility to compose CSS
