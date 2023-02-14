@@ -1,0 +1,34 @@
+---
+title: Passthrough
+description: How variant props are passed down to the styled element.
+category: Advanced
+index: 30
+---
+
+### What is Passthrough?
+
+Most of the time the variants you define will only be concerned with styling and the `prop` does not need to make it all the way down to the element being extended. For example, React will throw an error when a DOM element receives an unknown prop.
+
+Given this, CSS Components by default will not pass variant values down to the element being styled by default.
+
+However, there are times when you do indeed wish to pass a prop down element, either to be visible on the DOM, or used by a composed component. This is where `passthrough` comes in.
+
+### Example: `readOnly` input field.
+
+In this example, we want to build an input field that should appear very differently if it is editable or not. We can do this by making the `readOnly` intrinsic attribute a variant.
+
+Note below we are using the `passthrough` option to pass the `readOnly` prop down to the DOM element.
+
+```jsx
+const Input = styled("input", {
+  css: "input",
+  variants: {
+    readOnly: {
+      true: "disabled",
+    },
+  },
+  passthrough: ["readOnly"],
+});
+
+() => <Input type="text" value="Unediable" readOnly />;
+```
