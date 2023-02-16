@@ -15,7 +15,10 @@ const code = `const Button = styled('button', {
     },
     outline: {
       true: "btnOutline",
-    }
+    },
+    disabled: {
+      true: "btnDisabled",
+    },
   },
   compoundVariants: [
     {
@@ -33,7 +36,7 @@ const code = `const Button = styled('button', {
     color: "gray",
     outline: true,
   },
-  domPassthrough: ["color"],
+  passthrough: ["disabled"],
 });`;
 
 interface Section {
@@ -46,22 +49,22 @@ const sections: Section[] = [
   {
     title: "Variants",
     description: "Define multiple component variants.",
-    highlight: [4, 12],
+    highlight: [4, 15],
   },
   {
     title: "Compound Variants",
     description: "Apply styles only when multiple variants match.",
-    highlight: [13, 24],
+    highlight: [16, 27],
   },
   {
     title: "Default Variants",
     description: "Set a value as the default for each variant.",
-    highlight: [25, 28],
+    highlight: [28, 31],
   },
   {
-    title: "DOM Shielding",
-    description: "Prevent styles from leaking to DOM elements.",
-    highlight: [29, 29],
+    title: "Passthrough",
+    description: "Allow props to passthrough to the element it is extending.",
+    highlight: [32, 32],
   },
 ];
 
