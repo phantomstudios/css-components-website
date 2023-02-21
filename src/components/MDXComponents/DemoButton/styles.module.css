@@ -2,7 +2,7 @@ button.DemoButtonWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: olive;
+  background-color: rgb(179, 179, 8);
   border: none;
   border-radius: 4px;
 
