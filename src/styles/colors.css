@@ -1,5 +1,5 @@
 :root, *::after, *::before {
-  --color-fg: black;
+  --color-fg: #333;
   --color-bg: white;
   --color-grey: #ddd;
   --color-blue: #0070f3;

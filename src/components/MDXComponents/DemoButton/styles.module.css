@@ -2,7 +2,7 @@ button.DemoButtonWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: olive;
+  background-color: rgb(179, 179, 8);
   border: none;
   border-radius: 4px;
 
@@ -12,11 +12,11 @@ button.DemoButtonWrapper {
 
 button.colorViolet {
   color: white;
-  background-color: blueviolet;
+  background-color: #7456ea;
 }
 
 button.colorViolet:hover {
-  background-color: darkviolet;
+  background-color: #5d3fd3;
 }
 
 button.colorGray {
@@ -41,8 +41,8 @@ button.outlined {
 }
 
 button.colorOutlinedViolet {
-  color: blueviolet;
-  border-color: darkviolet;
+  color: #7456ea;
+  border-color: #5d3fd3;
 }
 
 button.colorOutlinedViolet:hover {
