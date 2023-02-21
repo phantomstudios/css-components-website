@@ -1,9 +1,15 @@
 div.PreviewWrapper {
-  margin: 0;
+  margin: 16px 0 0 0;
   overflow: auto;
-  box-shadow: 0 0 0 1px #ff000088;
+  border: 1px solid #eee;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
   padding: 16px;
   position: relative;
+}
+
+div.PreviewWrapper + pre > div {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
 }
