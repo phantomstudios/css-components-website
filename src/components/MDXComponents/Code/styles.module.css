@@ -1,6 +1,6 @@
 div.CodeWrapper {
   border: 1px solid #eee;
-  border-radius: 16px;
+  border-radius: 8px;
   overflow: hidden;
   width: 100%;
   margin: 0;
@@ -12,8 +12,9 @@ div.CodeWrapper pre {
   height: 100%;
 }
 
-@media (min-width: 1024px) {
+/* @media (min-width: 1024px) {
   div.CodeWrapper {
     margin-left: 1rem;
+    width: calc(100% - 1rem);
   }
-}
+} */

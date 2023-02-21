@@ -1,8 +1,11 @@
 main.DocWrapper {
-  /* background-color: orange; */
+  padding: 80px 64px;
 }
 
-main.DocWrapper h1, main.DocWrapper h2, main.DocWrapper h3, main.DocWrapper h4 {
+main.DocWrapper h1,
+main.DocWrapper h2,
+main.DocWrapper h3,
+main.DocWrapper h4 {
   margin: 2em 0 0.25em 0;
   font-weight: 500;
 }
@@ -34,8 +37,7 @@ main.DocWrapper hr {
 
 main.DocWrapper p {
   font-size: 17px;
-  color: #333;
-  /* font-weight: 500; */
+  line-height: 1.5;
 }
 
 p.Description {
@@ -43,4 +45,12 @@ p.Description {
   font-weight: 400;
   color: #777;
   /* font-weight: 500; */
+}
+
+main.DocWrapper li {
+  line-height: 1.5;
+}
+
+main.DocWrapper pre {
+  margin: 0;
 }
