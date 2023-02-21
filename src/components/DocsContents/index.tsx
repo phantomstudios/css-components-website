@@ -7,6 +7,7 @@ import { Docs } from "./styles";
 
 const DocsContents = () => {
   const categories = getAllDocsCategories();
+  // className={doc.title == slug ? "active" : ""}
   return (
     <Categories>
       {categories.map((category, i) => (
