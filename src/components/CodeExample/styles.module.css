@@ -1,8 +1,14 @@
 div.CodeExampleWrapper {
   display: flex;
-  padding: 1rem;
+  padding: 1rem 3rem;
   flex-direction: column;
   margin: 1.5rem 0 1rem;
+  max-width: 1440px;
+  background: radial-gradient(
+    circle at 50% 30%,
+    hsla(162, 100%, 75%, 0.2),
+    rgba(255, 255, 255, 0) 20%
+  );
 }
 
 ul.CodeSections {
@@ -11,18 +17,23 @@ ul.CodeSections {
   flex-direction: column;
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 2rem 0 3rem;
   align-items: center;
 }
 
 @media (min-width: 1024px) {
   div.CodeExampleWrapper {
     flex-direction: row;
-    margin: 3rem 0 2rem;
+    margin: 3rem auto 2rem;
     padding: 1rem 4rem;
     gap: 2rem;
+    background: radial-gradient(
+      circle at 30% 50%,
+      hsla(162, 100%, 75%, 0.2),
+      rgba(255, 255, 255, 0) 30%
+    );
   }
-  
+
   div.CodeExampleWrapper h2 {
     margin-top: 0;
   }
@@ -38,17 +49,22 @@ li.CodeSection {
   margin: 0 -1rem;
   border-radius: 0.5rem;
   border: 2px solid transparent;
-  transition: all 0.2s ease-in-out;
+  background-color: #ffffff44;
+  box-shadow: 0 0 16px hsla(163, 13%, 73%, 0.3);
+  transition: all 0.3s ease-in-out;
   width: 100%;
 }
 
 li.CodeSection:hover {
   transform: translate(0, -0.1rem);
-  border-color: var(--color-grey);
+  background-color: white;
+  scale: 1.03;
 }
 
 li.CodeSection_active_true {
-  border-color: var(--color-blue) !important;
+  border-color: var(--color-blue);
+  background-color: white;
+  scale: 1.03;
 }
 
 li.CodeSection h3 {

@@ -1,4 +1,7 @@
 div.CodeWrapper {
+  font-size: 15px;
+  line-height: 1.4;
+
   border: 1px solid #eee;
   border-radius: 8px;
   overflow: hidden;
@@ -10,14 +13,6 @@ div.CodeWrapper {
 div.CodeWrapper pre {
   margin: 0 !important;
   height: 100%;
-}
-
-main.DocWrapper p > code,
-main.DocWrapper li > code {
-  font-size: 17px;
-  color: #7456ea;
-  background-color: #7456ea20;
-  padding: 0 0.2rem;
 }
 
 /* @media (min-width: 1024px) {
