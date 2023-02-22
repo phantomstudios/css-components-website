@@ -12,6 +12,14 @@ div.CodeWrapper pre {
   height: 100%;
 }
 
+main.DocWrapper p > code,
+main.DocWrapper li > code {
+  font-size: 17px;
+  color: #7456ea;
+  background-color: #7456ea20;
+  padding: 0 0.2rem;
+}
+
 /* @media (min-width: 1024px) {
   div.CodeWrapper {
     margin-left: 1rem;

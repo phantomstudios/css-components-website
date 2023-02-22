@@ -1,0 +1,16 @@
+ul.Docs {
+  list-style-type: none;
+  padding: 0;
+  font-size: 13px;
+}
+
+li.List {
+  padding: 0.5em 12px;
+}
+
+li.active {
+  color: #7456ea;
+  background-color: #7456ea20;
+  font-weight: bold;
+  border-radius: 999px;
+}

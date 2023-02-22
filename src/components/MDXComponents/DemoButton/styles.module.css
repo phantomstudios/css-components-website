@@ -4,10 +4,12 @@ button.DemoButtonWrapper {
   justify-content: center;
   background-color: rgb(179, 179, 8);
   border: none;
-  border-radius: 4px;
+  border-radius: 999px;
 
   font-size: 16px;
-  padding: 12px 16px;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  padding: 12px 24px;
 }
 
 button.colorViolet {
@@ -20,23 +22,27 @@ button.colorViolet:hover {
 }
 
 button.colorGray {
-  background-color: gainsboro;
+  color: #444;
+  background-color: #f4f4f4;
 }
 
 button.colorGray:hover {
-  background-color: lightgray;
+  background-color: #e4e4e4;
 }
 
 button.sizeSmall {
   font-size: 12px;
+  font-weight: 500;
+  
 }
 
 button.sizeLarge {
-  font-size: 18px;
+  font-size: 20px;
+  height: 56px;
 }
 
 button.outlined {
-  border: 2px solid black;
+  border: 2px solid #333;
   background-color: transparent;
 }
 
@@ -51,9 +57,9 @@ button.colorOutlinedViolet:hover {
 
 button.colorOutlinedGray {
   color: gray;
-  border-color: lightgray;
+  border-color: #e4e4e4;
 }
 
 button.colorOutlinedGray:hover {
-  color: black;
+  color: #333;
 }

@@ -1,23 +1,14 @@
-import { Category } from "@/content";
+import { getAllDocsCategories } from "@/content";
 
-import { Categories, DocLink } from "./styles";
-import { Docs } from "./styles";
+import { Categories } from "./styles";
+import NavLinks from "../NavLinks";
 
-const DocsContents = ({ categories }: { categories: Category[] }) => {
+const DocsContents = () => {
+  const categories = getAllDocsCategories();
+
   return (
     <Categories>
-      {categories.map((category, i) => (
-        <li key={i}>
-          <h2>{category.title}</h2>
-          <Docs>
-            {category.docs.map((doc, i) => (
-              <li key={i}>
-                <DocLink href={`/docs/${doc.slug}`}>{doc.title}</DocLink>
-              </li>
-            ))}
-          </Docs>
-        </li>
-      ))}
+      <NavLinks categories={categories} />
     </Categories>
   );
 };
