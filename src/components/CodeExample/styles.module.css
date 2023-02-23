@@ -6,7 +6,7 @@ div.CodeExampleWrapper {
   max-width: 1440px;
   background: radial-gradient(
     circle at 50% 30%,
-    hsla(162, 100%, 75%, 0.2),
+    #8ccfff53,
     rgba(255, 255, 255, 0) 20%
   );
 }
@@ -29,7 +29,7 @@ ul.CodeSections {
     gap: 2rem;
     background: radial-gradient(
       circle at 30% 50%,
-      hsla(162, 100%, 75%, 0.2),
+      #8ccfff53,
       rgba(255, 255, 255, 0) 30%
     );
   }
@@ -44,7 +44,6 @@ ul.CodeSections {
 }
 
 li.CodeSection {
-  padding: 0;
   padding: 1rem;
   margin: 0 -1rem;
   border-radius: 0.5rem;

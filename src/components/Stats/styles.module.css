@@ -1,3 +1,66 @@
+/* Refactor for consistency with CSS Components */
+
 .statsWrapper {
+  display: flex;
+  padding: 1rem 3rem;
+  flex-direction: column;
+  text-align: center;
+  margin: 1.5rem auto 1rem;
+  max-width: 800px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    hsla(162, 100%, 75%, 0.5),
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.statsWrapper h2 {
+  font-size: 27px;
+}
+
+.statsWrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   padding: 1rem;
+  list-style: none;
+}
+
+.statsWrapper li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  padding: 1rem 3rem;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  width: 240px;
+  height: 200px;
+  background-color: #ffffff44;
+  box-shadow: 0 0 16px hsla(163, 13%, 73%, 0.3);
+}
+
+.statsWrapper li h3 {
+  font-weight: 500;
+  opacity: 0.5;
+  margin: 0;
+}
+
+.statsWrapper li p {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (min-width: 1180px) {
+  .statsWrapper {
+    max-width: 1440px;
+    height: 640px;
+  }
+
+  .statsWrapper ul {
+    flex-direction: row;
+  }
 }

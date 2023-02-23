@@ -10,15 +10,17 @@ button.DemoButtonWrapper {
   font-weight: 700;
   letter-spacing: 0.02rem;
   padding: 12px 24px;
+
+  cursor: pointer;
 }
 
-button.colorViolet {
+button.colorBlue {
   color: white;
-  background-color: #7456ea;
+  background-color: var(--color-blue);
 }
 
-button.colorViolet:hover {
-  background-color: #5d3fd3;
+button.colorBlue:hover {
+  background-color: var(--color-blue-dark);
 }
 
 button.colorGray {
@@ -33,7 +35,6 @@ button.colorGray:hover {
 button.sizeSmall {
   font-size: 12px;
   font-weight: 500;
-  
 }
 
 button.sizeLarge {
@@ -46,12 +47,12 @@ button.outlined {
   background-color: transparent;
 }
 
-button.colorOutlinedViolet {
-  color: #7456ea;
-  border-color: #5d3fd3;
+button.colorOutlinedBlue {
+  color: var(--color-blue);
+  border-color: var(--color-blue-dark);
 }
 
-button.colorOutlinedViolet:hover {
+button.colorOutlinedBlue:hover {
   color: white;
 }
 
