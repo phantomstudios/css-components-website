@@ -65,3 +65,11 @@ main.DocWrapper li {
 main.DocWrapper pre {
   margin: 0;
 }
+
+main.DocWrapper li {
+  line-height: 1.5;
+}
+
+main.DocWrapper pre {
+  margin: 0;
+}
