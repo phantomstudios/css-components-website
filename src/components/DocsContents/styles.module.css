@@ -12,3 +12,8 @@ ul.Categories > li h2 {
   font-size: inherit;
   margin: 0 0 1em 12px;
 }
+
+ul.Categories img {
+  margin-left: 16px;
+  margin-bottom: 16px;
+}

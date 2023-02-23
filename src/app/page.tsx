@@ -1,11 +1,13 @@
 import { GoArrowRight, GoMarkGithub } from "react-icons/go";
+import { BiCopy } from "react-icons/bi";
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 
 import { getAllDocsCategories } from "@/content";
 import Stats from "@/components/Stats";
 import HeroFeatures from "@/components/HeroFeatures";
 import CodeExample from "@/components/CodeExample";
+import CodeClipboard from "@/components/CodeClipboard";
 
 import { Container, Hero } from "./styles";
 
@@ -16,14 +18,13 @@ export default function Home() {
   return (
     <Container>
       <Hero>
-        {/* <Image
+        <Image
           src="/logo.svg"
           alt="CSS Components"
-          width={128}
-          height={128}
+          width={64}
+          height={64}
           unoptimized
-        /> */}
-
+        />
         <h1>Componentize your CSS styles the right way</h1>
         <p>
           Not another styling system, but a lightweight utility to compose CSS
@@ -45,6 +46,9 @@ export default function Home() {
             </a>
           </li>
         </ul>
+        <CodeClipboard text="npm i @phntms/css-components">
+          <BiCopy />
+        </CodeClipboard>
       </Hero>
       <CodeExample />
       <HeroFeatures />
