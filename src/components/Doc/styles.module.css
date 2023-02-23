@@ -54,3 +54,12 @@ main.DocWrapper li {
 main.DocWrapper pre {
   margin: 0;
 }
+
+/* This styles inline code (i.e. NOT the MDXComponents/code component). */
+main.DocWrapper p > code,
+main.DocWrapper li > code {
+  font-size: 17px;
+  color: var(--color-blue);
+  background-color: var(--color-blue-transparent);
+  padding: 0 0.2rem;
+}
