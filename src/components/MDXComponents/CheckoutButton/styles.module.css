@@ -1,5 +1,5 @@
 button.CheckoutButtonWrapper {
-  box-shadow: 0 4px 0 var(--color-blue);
+  box-shadow: 0 4px 0 var(--color-blue-dark);
   border-radius: 8px;
   padding: 12px 24px 10px;
   margin-bottom: 4px;

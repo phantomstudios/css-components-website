@@ -61,5 +61,5 @@ button.colorOutlinedGray {
 }
 
 button.colorOutlinedGray:hover {
-  color: #333;
+  color: var(--color-fg);
 }
