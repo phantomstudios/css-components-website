@@ -17,7 +17,7 @@ interface Props {
 
 const Code = ({ children, language, highlight }: Props) => {
   return (
-    <CodeWrapper>
+    <CodeWrapper id="code-example">
       <SyntaxHighlighter
         language={language}
         style={style}
