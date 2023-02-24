@@ -66,7 +66,6 @@ li.statCard p {
 @media (min-width: 1180px) {
   .statsWrapper {
     max-width: 1440px;
-    /* height: 640px; */
     background: radial-gradient(
         circle at 60% 55%,
         hsla(162, 100%, 75%, 0.5),
