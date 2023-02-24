@@ -4,8 +4,10 @@ div.Container {
   justify-content: center;
 }
 
-div.Container_sideBar_true {
-  margin-left: 256px;
+@media (min-width: 768px) {
+  div.Container_sideBar_true {
+    margin-left: 256px;
+  }
 }
 
 main.Hero {
@@ -68,7 +70,6 @@ main.Hero p {
 
 main.Hero ul {
   margin: 0;
-  /* margin-top: 2em; */
   display: flex;
   list-style: none;
   padding: 0;
@@ -78,7 +79,10 @@ main.Hero ul {
 main.Hero ul li a {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   font-size: large;
+=======
+>>>>>>> master
   padding: 18px 32px;
   background-color: #ffffffaa;
   color: var(--color-fg);

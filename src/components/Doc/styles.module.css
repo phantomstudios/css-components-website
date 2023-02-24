@@ -1,5 +1,5 @@
 main.DocWrapper {
-  padding: 80px 64px;
+  padding: 0 2rem 1rem;
 }
 
 main.DocWrapper h1,
@@ -13,17 +13,14 @@ main.DocWrapper h4 {
 main.DocWrapper h1 {
   font-size: 35px;
   margin: 0 0 0.25em 0;
-  /* font-weight: 500; */
 }
 
 main.DocWrapper h2 {
   font-size: 27px;
-  /* font-weight: 500; */
 }
 
 main.DocWrapper h3 {
   font-size: 19px;
-  /* font-weight: 500; */
 }
 
 main.DocWrapper hr {
@@ -32,11 +29,11 @@ main.DocWrapper hr {
   border: none;
   background-color: #eee;
   height: 1px;
-  /* font-weight: 500; */
 }
 
 main.DocWrapper p {
   font-size: 17px;
+  color: #333;
   line-height: 1.5;
 }
 
@@ -44,7 +41,28 @@ p.Description {
   font-size: 21px;
   font-weight: 400;
   color: #777;
-  /* font-weight: 500; */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  main.DocWrapper {
+    padding: 1rem 6rem 1rem 2rem;
+    margin: 1.5rem 0 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  main.DocWrapper {
+    padding: 1rem 0 1rem 4rem;
+    margin: 1.5rem 5rem 3rem;
+    width: 66%;
+  }
+}
+main.DocWrapper li {
+  line-height: 1.5;
+}
+
+main.DocWrapper pre {
+  margin: 0;
 }
 
 main.DocWrapper li {

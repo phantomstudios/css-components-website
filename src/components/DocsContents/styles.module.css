@@ -10,10 +10,30 @@ ul.Categories > li {
 ul.Categories > li h2 {
   font-weight: 700;
   font-size: inherit;
+<<<<<<< HEAD
   margin: 0 0 1em 12px;
 }
 
 ul.Categories img {
   margin-left: 16px;
   margin-bottom: 16px;
+=======
+  margin: 0 0 1em 0;
+}
+
+ul.Docs {
+  list-style-type: none;
+  padding: 0;
+  font-size: 13px;
+}
+
+ul.Docs li {
+  margin-bottom: 1em;
+  transition: transform 150ms ease-in-out;
+}
+
+ul.Docs li:hover {
+  transform: translateX(2px);
+  margin: 0 0 1em 16px;
+>>>>>>> master
 }
