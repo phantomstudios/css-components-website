@@ -79,10 +79,7 @@ main.Hero ul {
 main.Hero ul li a {
   display: flex;
   align-items: center;
-<<<<<<< HEAD
   font-size: large;
-=======
->>>>>>> master
   padding: 18px 32px;
   background-color: #ffffffaa;
   color: var(--color-fg);
