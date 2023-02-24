@@ -1,5 +1,4 @@
 import { GoArrowRight, GoMarkGithub } from "react-icons/go";
-import { BiCopy } from "react-icons/bi";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -46,9 +45,7 @@ export default function Home() {
             </a>
           </li>
         </ul>
-        <CodeClipboard text="npm i @phntms/css-components">
-          <BiCopy />
-        </CodeClipboard>
+        <CodeClipboard text="npm i @phntms/css-components" />
       </Hero>
       <CodeExample />
       <HeroFeatures />

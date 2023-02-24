@@ -4,14 +4,15 @@ import { setTimeout } from "timers";
 
 import { useState } from "react";
 
+import { BiCopy } from "react-icons/bi";
+
 import { CodeClipboardWrapper } from "./styles";
 
 interface Props {
-  children: React.ReactNode;
   text: string;
 }
 
-const CodeClipboard = ({ children, text }: Props) => {
+const CodeClipboard = ({ text }: Props) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const copy = () => {
@@ -24,8 +25,7 @@ const CodeClipboard = ({ children, text }: Props) => {
 
   return (
     <CodeClipboardWrapper copied={isCopied} onClick={copy}>
-      {" "}
-      {text} {children}{" "}
+      {text} <BiCopy />
     </CodeClipboardWrapper>
   );
 };
