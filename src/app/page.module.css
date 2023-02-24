@@ -66,6 +66,7 @@ main.Hero p {
   color: var(--color-fg);
   opacity: 0.5;
   margin: 0;
+  padding-bottom: 2rem;
 }
 
 main.Hero ul {

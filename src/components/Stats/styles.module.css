@@ -11,7 +11,7 @@
       rgba(255, 255, 255, 0) 50%
     ),
     radial-gradient(
-      circle at 35% 40%,
+      circle at 40% 40%,
       hsla(331, 100%, 75%, 0.5),
       rgba(255, 255, 255, 0) 40%
     );
@@ -66,16 +66,16 @@ li.statCard p {
 @media (min-width: 1180px) {
   .statsWrapper {
     max-width: 1440px;
-    height: 640px;
+    /* height: 640px; */
     background: radial-gradient(
-        circle at 70% 50%,
+        circle at 60% 55%,
         hsla(162, 100%, 75%, 0.5),
-        rgba(255, 255, 255, 0) 30%
+        rgba(255, 255, 255, 0) 25%
       ),
       radial-gradient(
-        circle at 30% 40%,
+        circle at 40% 45%,
         hsla(331, 100%, 75%, 0.5),
-        rgba(255, 255, 255, 0) 30%
+        rgba(255, 255, 255, 0) 25%
       );
   }
 
