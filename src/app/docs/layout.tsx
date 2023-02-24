@@ -1,4 +1,4 @@
-import Drawer from "@/components/Drawer";
+import DocsNav from "@/components/DocsNav";
 import DocsContents from "@/components/DocsContents";
 
 export default function RootLayout({
@@ -8,9 +8,9 @@ export default function RootLayout({
 }) {
   return (
     <>
-      <Drawer>
+      <DocsNav>
         <DocsContents />
-      </Drawer>
+      </DocsNav>
       {children}
     </>
   );
