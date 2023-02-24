@@ -6,10 +6,15 @@
   margin: 1.5rem auto 1rem;
   max-width: 800px;
   background: radial-gradient(
-    circle at 50% 50%,
-    hsla(162, 100%, 75%, 0.5),
-    rgba(255, 255, 255, 0) 50%
-  );
+      circle at 65% 50%,
+      hsla(162, 100%, 75%, 0.5),
+      rgba(255, 255, 255, 0) 50%
+    ),
+    radial-gradient(
+      circle at 35% 40%,
+      hsla(331, 100%, 75%, 0.5),
+      rgba(255, 255, 255, 0) 40%
+    );
 }
 
 .statsWrapper h2 {
@@ -38,6 +43,12 @@ li.statCard {
   height: 200px;
   background-color: #ffffff44;
   box-shadow: 0 0 16px hsla(163, 13%, 73%, 0.3);
+  transition: 0.2s;
+}
+
+li.statCard:hover {
+  scale: 1.03;
+  background-color: #ffffffaa;
 }
 
 li.statCard h3 {
@@ -56,6 +67,16 @@ li.statCard p {
   .statsWrapper {
     max-width: 1440px;
     height: 640px;
+    background: radial-gradient(
+        circle at 70% 50%,
+        hsla(162, 100%, 75%, 0.5),
+        rgba(255, 255, 255, 0) 30%
+      ),
+      radial-gradient(
+        circle at 30% 40%,
+        hsla(331, 100%, 75%, 0.5),
+        rgba(255, 255, 255, 0) 30%
+      );
   }
 
   .statsCards {

@@ -44,7 +44,7 @@ main.Hero h1 {
   }
 
   main.Hero {
-    padding: 10em 12em;
+    padding: 10em 12em 6em;
     max-width: 1120px;
     margin: 0 auto;
   }
@@ -79,6 +79,7 @@ main.Hero ul {
 main.Hero ul li a {
   display: flex;
   align-items: center;
+  font-size: large;
   padding: 18px 32px;
   background-color: #ffffffaa;
   color: var(--color-fg);

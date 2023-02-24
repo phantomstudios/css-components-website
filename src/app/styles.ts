@@ -11,6 +11,7 @@ export const Container = styled("div", {
   },
   defaultVariants: {},
 });
+
 export const Hero = styled("main", {
   css: css.Hero,
 });
