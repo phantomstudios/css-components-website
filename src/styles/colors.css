@@ -1,7 +1,10 @@
-:root, *::after, *::before {
+:root,
+*::after,
+*::before {
   --color-fg: #333;
   --color-bg: white;
   --color-grey: #ddd;
-  --color-blue: #0070f3;
-  --color-brand: #ee5511;
+  --color-blue: #0095ff;
+  --color-blue-dark: #1d7deb;
+  --color-blue-transparent: #00aaff1d;
 }

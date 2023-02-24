@@ -13,12 +13,21 @@ div.Container {
 main.Hero {
   padding: 4em;
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-fg);
-  color: var(--color-bg);
+  background: radial-gradient(
+      circle at 40% 50%,
+      hsla(162, 100%, 75%, 0.5),
+      rgba(255, 255, 255, 0) 40%
+    ),
+    radial-gradient(
+      circle at 60% 40%,
+      hsla(331, 100%, 75%, 0.5),
+      rgba(255, 255, 255, 0) 40%
+    );
+  color: var(--color-fg);
 }
 
 main.Hero h1 {
@@ -35,8 +44,14 @@ main.Hero h1 {
   }
 
   main.Hero {
-    padding: 10em 4em;
+    padding: 10em 12em;
+    max-width: 1120px;
+    margin: 0 auto;
   }
+
+  /* main.Hero p {
+    padding: 0 8rem 4rem;
+  } */
 }
 
 main.Hero h1 a:hover,
@@ -46,12 +61,11 @@ main.Hero h1 a:active {
 }
 
 main.Hero p {
+  font-size: 1.5em;
   text-align: center;
-  color: var(--color-bg);
+  color: var(--color-fg);
   opacity: 0.5;
   margin: 0;
-  position: relative;
-  top: -1rem;
 }
 
 main.Hero ul {
@@ -65,17 +79,20 @@ main.Hero ul {
 main.Hero ul li a {
   display: flex;
   align-items: center;
-  padding: 1rem;
-  background-color: var(--color-bg);
+  padding: 18px 32px;
+  background-color: #ffffffaa;
   color: var(--color-fg);
-  border-radius: 1rem;
+  box-shadow: 0 0 24px hsla(163, 13%, 73%, 0.2);
+  border-radius: 999px;
   font-weight: bold;
-  transition: color 1s ease;
+  transition: 0.2s ease;
 }
 
 main.Hero ul li a:hover {
   color: var(--color-blue);
-  transition: color 100ms ease;
+  background-color: #fff;
+  scale: 1.03;
+  transition: 0.2s ease;
 }
 
 main.Hero ul li a svg {

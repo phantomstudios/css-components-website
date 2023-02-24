@@ -1,4 +1,7 @@
 div.CodeWrapper {
+  font-size: 15px;
+  line-height: 1.4;
+
   border: 1px solid #eee;
   border-radius: 8px;
   overflow: hidden;
