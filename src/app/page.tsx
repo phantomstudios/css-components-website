@@ -5,6 +5,7 @@ import Image from "next/image";
 import { getAllDocsCategories } from "@/content";
 import Stats from "@/components/Stats";
 import HeroFeatures from "@/components/HeroFeatures";
+import Footer from "@/components/Footer";
 import CodeExample from "@/components/CodeExample";
 import CodeClipboard from "@/components/CodeClipboard";
 
@@ -16,7 +17,7 @@ const first = categories[0].docs[0];
 export default function Home() {
   return (
     <Container>
-      <Hero>
+      <Hero id="hero">
         <Image
           src="/logo.svg"
           alt="CSS Components"
@@ -50,6 +51,7 @@ export default function Home() {
       <CodeExample />
       <HeroFeatures />
       <Stats />
+      <Footer />
     </Container>
   );
 }

@@ -12,9 +12,9 @@ const getBarColor = (name: string) => {
     case "Stitches":
       return "#9e6dff";
     case "styled-components":
-      return "#ace3ff";
+      return "#555555";
     case "Emotion":
-      return "#cac0ff";
+      return "#ff99ee";
     default:
       return "gray";
   }
