@@ -2,8 +2,8 @@
 *::after,
 *::before {
   --color-fg: #333;
-  --color-bg: white;
-  --color-grey: #ddd;
+  --color-bg: #fafafa;
+  --color-grey: hsla(0, 0%, 55%, 0.2);
   --color-blue: #0095ff;
   --color-blue-dark: #1d7deb;
   --color-blue-transparent: #00aaff1d;

@@ -1,5 +1,5 @@
 main.DocWrapper {
-  padding: 0 2rem 1rem;
+  padding: 0 4rem 4rem;
 }
 
 main.DocWrapper h1,
@@ -27,14 +27,14 @@ main.DocWrapper hr {
   width: 50%;
   margin: 2em auto;
   border: none;
-  background-color: #eee;
+  background-color: #ddd;
   height: 1px;
 }
 
 main.DocWrapper p {
   font-size: 17px;
-  color: #333;
-  line-height: 1.5;
+  color: var(--color-fg);
+  line-height: 2;
 }
 
 p.Description {
@@ -45,7 +45,6 @@ p.Description {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   main.DocWrapper {
-    padding: 1rem 6rem 1rem 2rem;
     margin: 1.5rem 0 3rem;
   }
 }

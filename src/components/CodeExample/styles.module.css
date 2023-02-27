@@ -44,7 +44,6 @@ ul.CodeSections {
 }
 
 li.CodeSection {
-  padding: 0;
   margin: 0 -1rem;
   border-radius: 0.5rem;
   border: 2px solid transparent;
