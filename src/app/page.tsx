@@ -1,6 +1,8 @@
 import { GoArrowRight, GoMarkGithub } from "react-icons/go";
 import Link from "next/link";
 import Image from "next/image";
+import { Dela_Gothic_One } from "@next/font/google";
+import { Noto_Sans } from "@next/font/google";
 
 import { getAllDocsCategories } from "@/content";
 import Stats from "@/components/Stats";
@@ -14,9 +16,12 @@ import { Container, Hero } from "./styles";
 const categories = getAllDocsCategories();
 const first = categories[0].docs[0];
 
+const headerFont = Dela_Gothic_One({ weight: ["400"], subsets: ["latin"] });
+const mainFont = Noto_Sans({ weight: ["400", "600"], subsets: ["latin"] });
+
 export default function Home() {
   return (
-    <Container>
+    <Container hasBackground className={mainFont.className}>
       <Hero id="hero">
         <Image
           src="/logo.svg"
@@ -25,7 +30,10 @@ export default function Home() {
           height={64}
           unoptimized
         />
-        <h1>Componentize your CSS styles the right way</h1>
+        <h1 className={headerFont.className}>
+          Componentize<br></br>your CSS styles<br></br>
+          <span>the right way</span>
+        </h1>
         <p>
           Not another styling system, but a lightweight utility to compose CSS
           styles into standard React.JS components.

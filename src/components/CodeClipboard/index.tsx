@@ -20,7 +20,7 @@ const CodeClipboard = ({ text }: Props) => {
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
-    }, 200);
+    }, 300);
   };
 
   return (

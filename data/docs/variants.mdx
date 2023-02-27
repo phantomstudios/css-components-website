@@ -11,7 +11,7 @@ You can add variants by using the `variants` config object key. There is no limi
 
 <Preview>
   <div style={{ display: "flex", gap: "20px" }}>
-    <DemoButton color="blue">Blue Button</DemoButton>
+    <DemoButton color="teal">Teal Button</DemoButton>
     <DemoButton color="gray">Gray Button</DemoButton>
   </div>
 </Preview>
@@ -21,13 +21,13 @@ const Button = styled("button", {
   css: "baseButton",
   variants: {
     color: {
-      blue: "Blue",
+      teal: "colorTeal",
       gray: "colorGray",
     },
   },
 });
 
-() => <Button color="blue">Button</Button>;
+() => <Button color="teal">Button</Button>;
 ```
 
 A variant accepts the same css style object as the [base styles](/docs/styling).
@@ -37,9 +37,9 @@ A variant accepts the same css style object as the [base styles](/docs/styling).
 <Preview>
   <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
     <DemoButton color="gray" size="small" />
-    <DemoButton color="blue" size="small" />
+    <DemoButton color="teal" size="small" />
     <DemoButton color="gray" size="large" />
-    <DemoButton color="blue" size="large" />
+    <DemoButton color="teal" size="large" />
   </div>
 </Preview>
 
@@ -48,7 +48,7 @@ const Button = styled("button", {
   css: "baseButton",
   variants: {
     color: {
-      blue: "colorBlue",
+      teal: "colorTeal",
       gray: "colorGray",
     },
     size: {
@@ -59,7 +59,7 @@ const Button = styled("button", {
 });
 
 () => (
-  <Button color="blue" size="large">
+  <Button color="teal" size="large">
     Button
   </Button>
 );
@@ -93,7 +93,7 @@ In the case of needing to set styles of a variant, based on a combination of oth
 
 <Preview>
   <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>
-    <DemoButton color="blue" outlined />
+    <DemoButton color="teal" outlined />
     <DemoButton color="gray" outlined />
   </div>
 </Preview>
@@ -103,7 +103,7 @@ const Button = styled("button", {
   css: "baseButton",
   variants: {
     color: {
-      blue: "colorBlue",
+      teal: "colorTeal",
       gray: "colorGray",
     },
     outlined: {
@@ -113,9 +113,9 @@ const Button = styled("button", {
 
   compoundVariants: [
     {
-      color: "blue",
+      color: "teal",
       outlined: true,
-      css: "colorOutlinedBlue",
+      css: "colorOutlinedTeal",
     },
     {
       color: "gray",
@@ -126,7 +126,7 @@ const Button = styled("button", {
 });
 
 () => (
-  <Button color="blue" outlined>
+  <Button color="teal" outlined>
     Button
   </Button>
 );
@@ -147,13 +147,13 @@ const Button = styled("button", {
   css: "baseButton",
   variants: {
     color: {
-      blue: "colorBlue",
+      teal: "colorTeal",
       gray: "colorGray",
     },
   },
 
   defaultVariants: {
-    color: "blue",
+    color: "teal",
   },
 });
 

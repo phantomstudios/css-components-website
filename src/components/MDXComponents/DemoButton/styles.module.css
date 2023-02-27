@@ -4,7 +4,7 @@ button.DemoButtonWrapper {
   justify-content: center;
   background-color: rgb(179, 179, 8);
   border: none;
-  border-radius: 999px;
+  border-radius: 4px;
 
   font-size: 16px;
   font-weight: 700;
@@ -13,22 +13,22 @@ button.DemoButtonWrapper {
   cursor: pointer;
 }
 
-button.colorBlue {
-  color: white;
-  background-color: var(--color-blue);
+button.colorTeal {
+  color: black;
+  background-color: var(--color-teal);
 }
 
-button.colorBlue:hover {
-  background-color: var(--color-blue-dark);
+button.colorTeal:hover {
+  background-color: var(--color-teal-dark);
 }
 
 button.colorGray {
-  color: #444;
-  background-color: #f4f4f4;
+  color: var(--color-fg);
+  background-color: var(--color-grey);
 }
 
 button.colorGray:hover {
-  background-color: #e4e4e4;
+  background-color: hsla(0, 0%, 55%, 0.15);
 }
 
 button.sizeSmall {
@@ -38,28 +38,32 @@ button.sizeSmall {
 
 button.sizeLarge {
   font-size: 20px;
-  height: 56px;
+  height: 60px;
 }
 
 button.outlined {
-  border: 2px solid #333;
+  border: 2px solid var(--color-grey);
   background-color: transparent;
 }
 
-button.colorOutlinedBlue {
-  color: var(--color-blue);
-  border-color: var(--color-blue-dark);
+button.colorOutlinedTeal {
+  color: var(--color-teal);
+  border-color: var(--color-teal-dark);
 }
 
-button.colorOutlinedBlue:hover {
-  color: white;
+button.colorOutlinedTeal:hover {
+  color: black;
+  background-color: var(--color-teal);
+  border: 2px solid var(--color-teal);
 }
 
 button.colorOutlinedGray {
-  color: gray;
-  border-color: #e4e4e4;
+  color: var(--color-fg);
+  /* background-color: hsla(0, 0%, 55%, 0.15); */
 }
 
 button.colorOutlinedGray:hover {
-  color: var(--color-fg);
+  color: white;
+  background-color: var(--color-grey);
+  border: 2px solid transparent;
 }

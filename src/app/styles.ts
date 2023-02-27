@@ -8,6 +8,9 @@ export const Container = styled("div", {
     sideBar: {
       true: css.Container_sideBar_true,
     },
+    hasBackground: {
+      true: css.Container_hasBackground_true,
+    },
   },
   defaultVariants: {},
 });

@@ -46,9 +46,8 @@ ul.HeroFeaturesWrapper span {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  color: var(--color-blue);
-  box-shadow: 0 4px 16px #93cfdc56;
+  background-color: #070a1188;
+  color: var(--color-teal);
   font-size: 1.5rem;
   width: 3rem;
   height: 3rem;
