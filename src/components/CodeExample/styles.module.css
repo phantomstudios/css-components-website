@@ -44,7 +44,6 @@ ul.CodeSections {
 }
 
 li.CodeSection {
-  padding: 0;
   margin: 0 -1rem;
   border-radius: 0.5rem;
   border: 2px solid transparent;
@@ -53,10 +52,6 @@ li.CodeSection {
   transition: all 0.3s ease-in-out;
   width: 100%;
 }
-
-/* li.CodeSection a {
-  border: 1px solid red;
-} */
 
 li.CodeSection:hover {
   transform: translate(0, -0.1rem);
