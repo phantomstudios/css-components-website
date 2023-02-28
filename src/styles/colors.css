@@ -1,10 +1,12 @@
 :root,
 *::after,
 *::before {
-  --color-fg: #333;
-  --color-bg: #fafafa;
-  --color-grey: hsla(0, 0%, 55%, 0.2);
-  --color-blue: #0095ff;
-  --color-blue-dark: #1d7deb;
-  --color-blue-transparent: #00aaff1d;
+  --color-fg: #fafafa;
+  --color-bg: #21252b;
+  --color-bg-dark: #070a1144;
+  --color-bg-darker: #070a1188;
+  --color-grey: hsla(0, 0%, 55%, 0.3);
+  --color-teal: #00fdc7;
+  --color-teal-dark: #00c4a3;
+  --color-teal-transparent: #00aaff22;
 }

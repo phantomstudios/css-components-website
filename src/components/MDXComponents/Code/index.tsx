@@ -2,7 +2,7 @@
 
 import { CSSProperties } from "react";
 
-import style from "react-syntax-highlighter/dist/esm/styles/hljs/atom-one-light";
+import style from "react-syntax-highlighter/dist/esm/styles/hljs/atom-one-dark";
 import SyntaxHighlighter from "react-syntax-highlighter";
 
 import { CodeWrapper } from "./styles";

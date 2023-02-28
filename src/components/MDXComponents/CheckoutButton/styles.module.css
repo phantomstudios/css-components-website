@@ -1,6 +1,14 @@
 button.CheckoutButtonWrapper {
-  box-shadow: 0 4px 0 var(--color-blue-dark);
-  border-radius: 8px;
+  background-color: transparent;
+  color: var(--color-fg);
+
+  border: 2px solid var(--color-grey);
+  border-radius: 4px;
+
   padding: 12px 24px 10px;
-  margin-bottom: 4px;
+}
+
+button.CheckoutButtonWrapper:hover {
+  background-color: #00000044;
+  color: white;
 }

@@ -8,13 +8,13 @@ export interface BenchmarkIndicator {
 const getBarColor = (name: string) => {
   switch (name) {
     case "CSS Components":
-      return "#0095ff";
+      return "rgb(0,253,199)";
     case "Stitches":
-      return "#9e6dff";
-    case "styled-components":
-      return "#555555";
+      return "rgb(15, 135, 131)";
     case "Emotion":
-      return "#ff99ee";
+      return "rgb(22, 95, 101)";
+    case "styled-components":
+      return "rgb(29, 55, 71)";
     default:
       return "gray";
   }

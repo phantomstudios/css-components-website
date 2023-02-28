@@ -2,6 +2,8 @@ import "@/styles/globals.css";
 import "@/styles/colors.css";
 import type { Metadata } from "next";
 
+import { fontClasses } from "@/styles/fonts";
+
 export const metadata: Metadata = {
   title: {
     default: "CSS Components",
@@ -42,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body>{children}</body>
+      <body className={fontClasses}>{children}</body>
     </html>
   );
 }

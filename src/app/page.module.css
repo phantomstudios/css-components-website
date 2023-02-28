@@ -4,10 +4,9 @@ div.Container {
   justify-content: center;
 }
 
-@media (min-width: 768px) {
-  div.Container_sideBar_true {
-    margin-left: 256px;
-  }
+div.Container_hasBackground_true {
+  background: var(--color-bg) url("/background.png") center no-repeat fixed;
+  background-size: contain;
 }
 
 main.Hero {
@@ -17,41 +16,22 @@ main.Hero {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: radial-gradient(
-      circle at 40% 50%,
-      hsla(162, 100%, 75%, 0.5),
-      rgba(255, 255, 255, 0) 40%
-    ),
-    radial-gradient(
-      circle at 60% 40%,
-      hsla(331, 100%, 75%, 0.5),
-      rgba(255, 255, 255, 0) 40%
-    );
   color: var(--color-fg);
 }
 
 main.Hero h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-style: normal;
   text-align: center;
   text-decoration: none;
+  width: 125%;
+  font-family: var(--ubuntu);
   margin: 0;
+  line-height: 1.1;
 }
 
-@media (min-width: 768px) {
-  main.Hero h1 {
-    font-size: 4rem;
-  }
-
-  main.Hero {
-    padding: 10em 12em 6em;
-    max-width: 1120px;
-    margin: 0 auto;
-  }
-
-  /* main.Hero p {
-    padding: 0 8rem 4rem;
-  } */
+main.Hero h1 span {
+  color: var(--color-teal);
 }
 
 main.Hero h1 a:hover,
@@ -61,10 +41,8 @@ main.Hero h1 a:active {
 }
 
 main.Hero p {
-  font-size: 1.5em;
   text-align: center;
-  color: var(--color-fg);
-  opacity: 0.5;
+  color: #999;
   margin: 0;
   padding-bottom: 2rem;
 }
@@ -72,6 +50,7 @@ main.Hero p {
 main.Hero ul {
   margin: 0;
   display: flex;
+  flex-direction: column;
   list-style: none;
   padding: 0;
   gap: 1rem;
@@ -81,22 +60,54 @@ main.Hero ul li a {
   display: flex;
   align-items: center;
   font-size: large;
-  padding: 18px 32px;
-  background-color: #ffffffaa;
+  padding: 18px;
   color: var(--color-fg);
-  box-shadow: 0 0 24px hsla(163, 13%, 73%, 0.2);
-  border-radius: 999px;
+  border: 2px solid var(--color-grey);
+  border-radius: 4px;
   font-weight: bold;
   transition: 0.2s ease;
 }
 
 main.Hero ul li a:hover {
-  color: var(--color-blue);
-  background-color: #fff;
-  scale: 1.03;
+  color: var(--color-teal);
+  background-color: var(--color-bg-dark);
   transition: 0.2s ease;
 }
 
 main.Hero ul li a svg {
   margin-right: 0.5rem;
+}
+
+@media (min-width: 380px) {
+  main.Hero ul {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 576px) {
+  main.Hero h1 {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  main.Hero h1 {
+    font-size: 4rem;
+  }
+
+  main.Hero p {
+    font-size: 1.5em;
+  }
+
+  div.Container_sideBar_true {
+    margin-left: 256px;
+  }
+}
+
+@media (min-width: 992px) {
+  main.Hero {
+    padding: 10em 12em 6em;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
 }

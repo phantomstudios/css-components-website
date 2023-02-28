@@ -9,8 +9,8 @@ li.List {
 }
 
 li.active {
-  color: var(--color-blue);
-  background-color: var(--color-blue-transparent);
+  color: var(--color-teal);
+  background-color: var(--color-teal-transparent);
   font-weight: bold;
   border-radius: 999px;
 }

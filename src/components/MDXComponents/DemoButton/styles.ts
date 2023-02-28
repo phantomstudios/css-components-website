@@ -6,7 +6,7 @@ export const DemoButtonWrapper = styled("button", {
   css: css.DemoButtonWrapper,
   variants: {
     color: {
-      blue: css.colorBlue,
+      teal: css.colorTeal,
       gray: css.colorGray,
     },
     size: {
@@ -19,9 +19,9 @@ export const DemoButtonWrapper = styled("button", {
   },
   compoundVariants: [
     {
-      color: "blue",
+      color: "teal",
       outlined: true,
-      css: css.colorOutlinedBlue,
+      css: css.colorOutlinedTeal,
     },
     {
       color: "gray",
@@ -30,6 +30,6 @@ export const DemoButtonWrapper = styled("button", {
     },
   ],
   defaultVariants: {
-    color: "blue",
+    color: "teal",
   },
 });

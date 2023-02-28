@@ -11,7 +11,7 @@ const code = `const Button = styled('button', {
   variants: {
     color: {
       gray: "btnGray",
-      blue: "btnBlue",
+      teal: "btnTeal",
     },
     outline: {
       true: "btnOutline",
@@ -27,9 +27,9 @@ const code = `const Button = styled('button', {
       css: "btnGrayOutline",
     },
     {
-      color: "blue",
+      color: "teal",
       outline: true,
-      css: "btnBlueOutline",
+      css: "btnTealOutline",
     }
   ],
   defaultVariants: {

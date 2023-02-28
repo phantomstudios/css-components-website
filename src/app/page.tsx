@@ -25,7 +25,13 @@ export default function Home() {
           height={64}
           unoptimized
         />
-        <h1>Componentize your CSS styles the right way</h1>
+        <h1>
+          Componentize
+          <br />
+          your CSS styles
+          <br />
+          <span>the right way</span>
+        </h1>
         <p>
           Not another styling system, but a lightweight utility to compose CSS
           styles into standard React.JS components.
@@ -39,7 +45,8 @@ export default function Home() {
           <li>
             <a
               href="https://www.github.com/phantomstudios/css-components"
-              rel="external"
+              rel="external noreferrer"
+              target="_blank"
             >
               <GoMarkGithub />
               GitHub

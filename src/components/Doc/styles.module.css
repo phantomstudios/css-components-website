@@ -11,8 +11,9 @@ main.DocWrapper h4 {
 }
 
 main.DocWrapper h1 {
-  font-size: 35px;
-  margin: 0 0 0.25em 0;
+  font-size: 42px;
+  margin: 2rem 0 0;
+  color: var(--color-teal);
 }
 
 main.DocWrapper h2 {
@@ -27,35 +28,28 @@ main.DocWrapper hr {
   width: 50%;
   margin: 2em auto;
   border: none;
-  background-color: #ddd;
+  background-color: var(--color-grey);
   height: 1px;
 }
 
 main.DocWrapper p {
   font-size: 17px;
-  color: var(--color-fg);
+  color: #bbb;
   line-height: 2;
 }
 
+main.DocWrapper ul {
+  margin-bottom: 4rem;
+}
+
 p.Description {
-  font-size: 21px;
-  font-weight: 400;
+  font-size: 22px;
+  font-style: italic;
   color: #777;
+
+  margin: 0 0 2em;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  main.DocWrapper {
-    margin: 1.5rem 0 3rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  main.DocWrapper {
-    padding: 1rem 0 1rem 4rem;
-    margin: 1.5rem 5rem 3rem;
-    width: 66%;
-  }
-}
 main.DocWrapper li {
   line-height: 1.5;
 }
@@ -66,17 +60,25 @@ main.DocWrapper pre {
 
 main.DocWrapper li {
   line-height: 1.5;
-}
-
-main.DocWrapper pre {
-  margin: 0;
 }
 
 /* This styles inline code (i.e. NOT the MDXComponents/code component). */
 main.DocWrapper p > code,
 main.DocWrapper li > code {
   font-size: 17px;
-  color: var(--color-blue);
-  background-color: var(--color-blue-transparent);
-  padding: 0 0.2rem;
+  color: var(--color-teal);
+  background-color: var(--color-teal-transparent);
+}
+
+@media (min-width: 768px) {
+  main.DocWrapper {
+    margin: 5rem 0;
+  }
+}
+
+@media (min-width: 1180px) {
+  main.DocWrapper {
+    margin: 5rem 10%;
+    width: 66%;
+  }
 }

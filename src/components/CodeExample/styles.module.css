@@ -4,11 +4,6 @@ div.CodeExampleWrapper {
   flex-direction: column;
   margin: 1.5rem 0 1rem;
   max-width: 1440px;
-  background: radial-gradient(
-    circle at 50% 30%,
-    #8ccfff53,
-    rgba(255, 255, 255, 0) 20%
-  );
 }
 
 ul.CodeSections {
@@ -21,48 +16,21 @@ ul.CodeSections {
   align-items: center;
 }
 
-@media (min-width: 1024px) {
-  div.CodeExampleWrapper {
-    flex-direction: row;
-    margin: 3rem auto 2rem;
-    padding: 1rem 4rem;
-    gap: 2rem;
-    background: radial-gradient(
-      circle at 30% 50%,
-      #8ccfff53,
-      rgba(255, 255, 255, 0) 30%
-    );
-  }
-
-  div.CodeExampleWrapper h2 {
-    margin-top: 0;
-  }
-
-  ul.CodeSections {
-    padding-right: 0;
-  }
-}
-
 li.CodeSection {
   margin: 0 -1rem;
-  border-radius: 0.5rem;
-  border: 2px solid transparent;
-  background-color: #ffffff44;
-  box-shadow: 0 0 16px hsla(163, 13%, 73%, 0.3);
+  border: 2px solid var(--color-grey);
+  border-radius: 4px;
   transition: all 0.3s ease-in-out;
   width: 100%;
 }
 
 li.CodeSection:hover {
-  transform: translate(0, -0.1rem);
-  background-color: white;
-  scale: 1.03;
+  background-color: var(--color-bg-dark);
 }
 
 li.CodeSection_active_true {
-  border-color: var(--color-blue);
-  background-color: white;
-  scale: 1.03;
+  border: 2px solid var(--color-teal);
+  background-color: var(--color-bg-dark);
 }
 
 li.CodeSection h3 {
@@ -73,4 +41,21 @@ li.CodeSection h3 {
 li.CodeSection p {
   padding: 0 1rem 1rem;
   margin: 0;
+}
+
+@media (min-width: 1024px) {
+  div.CodeExampleWrapper {
+    flex-direction: row;
+    margin: 3rem auto 2rem;
+    padding: 1rem 4rem;
+    gap: 2rem;
+  }
+
+  div.CodeExampleWrapper h2 {
+    margin-top: 0;
+  }
+
+  ul.CodeSections {
+    padding-right: 0;
+  }
 }
