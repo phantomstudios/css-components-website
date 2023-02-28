@@ -5,24 +5,19 @@ export const NOTO_SANS = Noto_Sans({
   variable: "--noto-sans",
   weight: ["400", "600"],
   subsets: ["latin"],
+  fallback: ["sans-serif"],
 });
 
 export const UBUNTU = Ubuntu({
   variable: "--ubuntu",
   weight: ["400", "700"],
   subsets: ["latin"],
+  fallback: ["sans-serif"],
 });
 
 export const fontClasses = [NOTO_SANS.variable, UBUNTU.variable].join(" ");
 
-// In theory, we should be able to use Google fonts in CSS by using
-// var() - for example, ```font-family: var(--noto-sans);```.
+// Now import fontClasses into the layout, and add the class to the body
+// (```<body className={fontClasses}>{children}</body>```).
 
-// This should work in exactly the same way as local font imports,
-// as seen in zendesk-15-years, but in practice it doesn't.
-
-// This is a known quirk of Next 13, so this file (with comments)
-// will be left in case of future changes.
-
-// In the meantime, fonts are applied to individual components on a
-// per-page basis.
+// This will allow you to use ```var(--font-name)``` in CSS files.

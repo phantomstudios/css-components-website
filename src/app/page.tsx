@@ -2,7 +2,6 @@ import { GoArrowRight, GoMarkGithub } from "react-icons/go";
 import Link from "next/link";
 import Image from "next/image";
 
-import { UBUNTU } from "@/styles/fonts";
 import { getAllDocsCategories } from "@/content";
 import Stats from "@/components/Stats";
 import HeroFeatures from "@/components/HeroFeatures";
@@ -26,8 +25,11 @@ export default function Home() {
           height={64}
           unoptimized
         />
-        <h1 className={UBUNTU.className}>
-          Componentize<br></br>your CSS styles<br></br>
+        <h1>
+          Componentize
+          <br />
+          your CSS styles
+          <br />
           <span>the right way</span>
         </h1>
         <p>
@@ -43,7 +45,8 @@ export default function Home() {
           <li>
             <a
               href="https://www.github.com/phantomstudios/css-components"
-              rel="external"
+              rel="external noreferrer"
+              target="_blank"
             >
               <GoMarkGithub />
               GitHub

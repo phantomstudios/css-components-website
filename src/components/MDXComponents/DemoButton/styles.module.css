@@ -59,7 +59,6 @@ button.colorOutlinedTeal:hover {
 
 button.colorOutlinedGray {
   color: var(--color-fg);
-  /* background-color: hsla(0, 0%, 55%, 0.15); */
 }
 
 button.colorOutlinedGray:hover {

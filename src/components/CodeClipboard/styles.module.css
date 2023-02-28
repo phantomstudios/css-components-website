@@ -1,9 +1,8 @@
 span.CodeClipboard {
   display: flex;
   gap: 10px;
-  /* margin-top: 2rem; */
 
-  background-color: #070a1144;
+  background-color: var(--color-bg-dark);
   color: inherit;
 
   font-family: monospace;

@@ -25,12 +25,12 @@ li.CodeSection {
 }
 
 li.CodeSection:hover {
-  background-color: #070a1144;
+  background-color: var(--color-bg-dark);
 }
 
 li.CodeSection_active_true {
   border: 2px solid var(--color-teal);
-  background-color: #070a1144;
+  background-color: var(--color-bg-dark);
 }
 
 li.CodeSection h3 {

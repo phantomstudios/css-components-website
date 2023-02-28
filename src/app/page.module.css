@@ -25,10 +25,8 @@ main.Hero h1 {
   text-align: center;
   text-decoration: none;
   width: 125%;
-
+  font-family: var(--ubuntu);
   margin: 0;
-
-  /* This may need to change if the font changes */
   line-height: 1.1;
 }
 
@@ -72,8 +70,7 @@ main.Hero ul li a {
 
 main.Hero ul li a:hover {
   color: var(--color-teal);
-  background-color: #070a1144;
-  /* scale: 1.03; */
+  background-color: var(--color-bg-dark);
   transition: 0.2s ease;
 }
 

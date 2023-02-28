@@ -31,12 +31,12 @@ li.statCard {
   border-radius: 0.5rem;
   width: 240px;
   height: 200px;
-  background-color: #070a1144;
+  background-color: var(--color-bg-dark);
   transition: 0.2s;
 }
 
 li.statCard:hover {
-  background-color: #070a1188;
+  background-color: var(--color-bg-darker);
 }
 
 li.statCard h3 {

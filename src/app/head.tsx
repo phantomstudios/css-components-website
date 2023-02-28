@@ -9,6 +9,8 @@ export default function Head() {
         description="Not another styling system, but a lightweight utility to compose CSS styles into standard React.JS components."
         baseSiteUrl="https://www.css-components.net"
         keywords={["css", "component", "utility"]}
+        imageUrl="https://bit.ly/3wiUOuk"
+        imageAlt="PHANTOM logo."
         twitter={{
           cardSize: "large",
           siteUsername: "@phntmLDN",

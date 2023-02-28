@@ -17,7 +17,7 @@ const Footer = () => {
           />
         </a>
         <GoX />
-        <a href="https://www.phantom.land">
+        <a href="https://www.phantom.land" target="_blank" rel="noreferrer">
           <Image
             src="/phntm-logo.svg"
             alt="Phantom logo"
@@ -28,7 +28,9 @@ const Footer = () => {
       </FooterLogos>
       <p>
         CSS Components was made with ❤️ at
-        <Link href="https://www.phantom.land">Phantom.land</Link>
+        <Link href="https://www.phantom.land" target="_blank">
+          Phantom.land
+        </Link>
       </p>
     </FooterWrapper>
   );
