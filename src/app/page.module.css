@@ -85,10 +85,12 @@ main.Hero ul li a svg {
   main.Hero ul {
     flex-direction: row;
   }
+}
 
-  /* main.Hero h1 {
-    font-size: 2.5rem;
-  } */
+@media (min-width: 576px) {
+  main.Hero h1 {
+    font-size: 3rem;
+  }
 }
 
 @media (min-width: 768px) {
