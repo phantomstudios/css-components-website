@@ -12,6 +12,10 @@ interface Props {
   };
 }
 
+export async function generateMetadata({ params }: Props) {
+  return { title: params.slug };
+}
+
 export default async function Docs({ params }: Props) {
   const doc = await getMdxBySlug("docs", params.slug);
   if (!doc) return notFound();
