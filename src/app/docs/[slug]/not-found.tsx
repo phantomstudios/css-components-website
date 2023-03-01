@@ -1,3 +1,10 @@
+import NotFound from "@/components/404";
+import { Container } from "@/app/styles";
+
 export default function PostNotFound() {
-  return <p>Uh oh! This post could not be found. </p>;
+  return (
+    <Container sideBar>
+      <NotFound text="Uh oh! This document couldn't be found. 🤷‍♂️" />
+    </Container>
+  );
 }
