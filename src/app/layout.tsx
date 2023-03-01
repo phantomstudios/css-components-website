@@ -34,6 +34,10 @@ export const metadata: Metadata = {
     creator: "@phntmLDN",
     images: ["https://www.css-components.net/banner.png"],
   },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

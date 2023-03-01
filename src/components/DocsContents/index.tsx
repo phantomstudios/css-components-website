@@ -10,7 +10,7 @@ const DocsContents = () => {
   const categories = getAllDocsCategories();
 
   return (
-    <Categories>
+    <>
       <Link href="/">
         <Image
           src="/logo.svg"
@@ -19,8 +19,10 @@ const DocsContents = () => {
           height={32}
         />
       </Link>
-      <NavLinks categories={categories} />
-    </Categories>
+      <Categories>
+        <NavLinks categories={categories} />
+      </Categories>
+    </>
   );
 };
 
