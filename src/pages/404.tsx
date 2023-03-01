@@ -30,6 +30,10 @@ export const metadata: Metadata = {
     creator: "@phntmLDN",
     images: ["https://www.css-components.net/banner.png"],
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function PostNotFound() {

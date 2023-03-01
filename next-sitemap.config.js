@@ -18,18 +18,4 @@ module.exports = {
   generateRobotsTxt: false, // (optional)
   generateIndexSitemap: true, //single sitemap
   exclude: ["/server-sitemap.xml"],
-  robotsTxtOptions: {
-    additionalSitemaps: [`${SITE_URL}/server-sitemap.xml`],
-    policies: [
-      {
-        userAgent: "*",
-        allow: "/",
-        disallow: disallowedUrls
-      },
-      {
-        userAgent: "Twitterbot",
-        disallow: [""]
-      }
-    ],
-  },
 };
