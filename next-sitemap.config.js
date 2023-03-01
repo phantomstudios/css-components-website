@@ -15,7 +15,6 @@ if (process.env.VERCEL_ENV !== "production") disallowedUrls.push('/');
 
 module.exports = {
   siteUrl: SITE_URL,
-  generateRobotsTxt: false, // (optional)
   generateIndexSitemap: true, //single sitemap
   exclude: ["/server-sitemap.xml"],
 };
