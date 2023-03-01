@@ -8,7 +8,6 @@ const SITE_URL =
     : "http://localhost:3000";
 
 // Crawlers should not add these pages to search results
-const disallowedUrls = [];
 // If we are not on production, disallow everything
 if (process.env.VERCEL_ENV !== "production") disallowedUrls.push('/');
 
