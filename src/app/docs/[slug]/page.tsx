@@ -12,7 +12,6 @@ interface Props {
   };
 }
 
-// For some reason this stops the 404 (not-found.tsx) from working.
 
 export async function generateMetadata({ params }: Props) {
   const doc = await getMdxBySlug("docs", params.slug);
