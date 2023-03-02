@@ -1,0 +1,28 @@
+div.NotFoundWrapper {
+  font-family: var(--noto-sans);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4em 2em;
+}
+
+div.NotFoundWrapper a {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  font-size: large;
+  padding: 18px;
+  color: var(--color-fg);
+  border: 2px solid var(--color-grey);
+  border-radius: 4px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+div.NotFoundWrapper a:hover {
+  color: var(--color-teal);
+  background-color: var(--color-bg-dark);
+  transition: 0.2s ease;
+}

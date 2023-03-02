@@ -1,22 +1,18 @@
 import "@/styles/globals.css";
 import "@/styles/colors.css";
-import type { Metadata } from "next";
+
+import { Metadata } from "next";
 
 import { fontClasses } from "@/styles/fonts";
+import NotFound from "@/components/404";
 
 export const metadata: Metadata = {
-  title: {
-    default: "CSS Components",
-    template: "%s | CSS Components",
-  },
+  title: "404",
   description:
     "Not another styling system, but a lightweight utility to compose CSS styles into standard React.JS components.",
   keywords: ["css", "component", "utility"],
   openGraph: {
-    title: {
-      default: "CSS Components",
-      template: "%s | CSS Components",
-    },
+    title: "404",
     description:
       "Not another styling system, but a lightweight utility to compose CSS styles into standard React.JS components.",
     url: "https://www.css-components.net",
@@ -35,20 +31,15 @@ export const metadata: Metadata = {
     images: ["https://www.css-components.net/banner.png"],
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function PostNotFound() {
   return (
-    <html lang="en">
-      <head />
-      <body className={fontClasses}>{children}</body>
-    </html>
+    <div className={fontClasses}>
+      <NotFound text="Uh oh! This page couldn't be found. 🤷‍♂️" />
+    </div>
   );
 }

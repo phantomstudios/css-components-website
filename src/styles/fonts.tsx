@@ -1,5 +1,5 @@
-import { Noto_Sans } from "@next/font/google";
-import { Ubuntu } from "@next/font/google";
+import { Noto_Sans } from "next/font/google";
+import { Ubuntu } from "next/font/google";
 
 export const NOTO_SANS = Noto_Sans({
   variable: "--noto-sans",

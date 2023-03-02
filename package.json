@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "generate:css": "npx css-components --css \"src/components/**/*.css\" --output styles.ts",
     "depcheck": "npx npm-check --update",
@@ -26,6 +27,7 @@
     "gray-matter": "^4.0.3",
     "mdx-bundler": "^9.0.1",
     "next": "^13.2.1",
+    "next-sitemap": "^3.1.55",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
