@@ -62,6 +62,10 @@ main.DocWrapper li {
   line-height: 1.5;
 }
 
+main.DocWrapper a {
+  font-weight: 700;
+}
+
 /* This styles inline code (i.e. NOT the MDXComponents/code component). */
 main.DocWrapper p > code,
 main.DocWrapper li > code {
