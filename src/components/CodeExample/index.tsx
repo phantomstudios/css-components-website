@@ -75,7 +75,7 @@ const CodeExample = () => {
       <div>
         <h2>Design composable component APIs with variants</h2>
         <p>
-          Variants are a first-class citizen of Stitches. With multiple
+          Variants are a first-class citizen of CSS Components. With multiple
           variants, compound variants, and default variants, you can design
           composable component APIs which are typed automatically.
         </p>
