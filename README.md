@@ -1,3 +1,9 @@
+## CSS Components Site
+
+This is the source code of the [CSS Components documentation](https://css-components.net) website.
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
