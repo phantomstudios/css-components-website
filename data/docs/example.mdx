@@ -7,7 +7,20 @@ index: 16
 
 Below is a full example of a basic component put together using CSS Components.
 
-Here you can see the `Panel` component in action. It's a simple component that has a title and some content.
+A component will be split into 3 files:
+
+```bash
+src
+└── components
+    └── Panel
+        ├── index.tsx # The main component file
+        ├── styles.module.css # The CSS file
+        └── styles.tsx # The CSS Components file)
+```
+
+We are going to create a simple `Panel` component that has a title and some content. The component will have a `wide` prop that will make the panel fill the width of its container.
+
+Here you can see the `Panel` component in action.
 
 <Preview>
   <Panel title="Hello World" wide>
@@ -28,6 +41,8 @@ import Panel from "@/components/Panel";
 ## panel/index.tsx
 
 This is the main component file. It's a simple component that has a title and some content. `PanelWrapper`, `Title` and `Content` are all CSS Components that are imported from `styles.tsx`.
+
+Notice how this component is free of ugly CSS class names. Everything is symantec.
 
 ```tsx
 import { PanelWrapper, Title, Content } from "./styles";
@@ -74,6 +89,8 @@ export const Content = styled("section", {
   css: css.Content,
 });
 ```
+
+Please note that while this example employs standard CSS, you have the freedom to utilize any styling solution of your choice, such as SCSS.
 
 ## panel/styles.module.css
 
