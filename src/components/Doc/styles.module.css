@@ -2,29 +2,29 @@ main.DocWrapper {
   padding: 0 4rem 4rem;
 }
 
-main.DocWrapper h1,
-main.DocWrapper h2,
-main.DocWrapper h3,
-main.DocWrapper h4 {
+main.DocWrapper > h1,
+main.DocWrapper > h2,
+main.DocWrapper > h3,
+main.DocWrapper > h4 {
   margin: 2em 0 0.25em 0;
   font-weight: 700;
 }
 
-main.DocWrapper h1 {
+main.DocWrapper > h1 {
   font-size: 42px;
   margin: 2rem 0 0;
   color: var(--color-teal);
 }
 
-main.DocWrapper h2 {
+main.DocWrapper > h2 {
   font-size: 27px;
 }
 
-main.DocWrapper h3 {
+main.DocWrapper > h3 {
   font-size: 19px;
 }
 
-main.DocWrapper hr {
+main.DocWrapper > hr {
   width: 50%;
   margin: 2em auto;
   border: none;
@@ -32,13 +32,13 @@ main.DocWrapper hr {
   height: 1px;
 }
 
-main.DocWrapper p {
+main.DocWrapper > p {
   font-size: 17px;
   color: #bbb;
   line-height: 2;
 }
 
-main.DocWrapper ul {
+main.DocWrapper > ul {
   margin-bottom: 4rem;
 }
 
@@ -50,7 +50,7 @@ p.Description {
   margin: 0 0 2em;
 }
 
-main.DocWrapper li {
+main.DocWrapper > ul > li {
   line-height: 1.5;
 }
 
@@ -58,9 +58,9 @@ main.DocWrapper pre {
   margin: 0;
 }
 
-main.DocWrapper li {
+/* main.DocWrapper li {
   line-height: 1.5;
-}
+} */
 
 main.DocWrapper a {
   font-weight: 700;

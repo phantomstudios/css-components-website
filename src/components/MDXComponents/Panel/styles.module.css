@@ -1,0 +1,25 @@
+.PanelWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  width: 240px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #e6e6e6;
+  color: black;
+}
+
+.PanelWrapper_wide{
+  width: 100%;
+}
+
+h2.Title{
+  background-color: #d6d6d6;
+  margin: 0;
+  padding: 1rem;
+}
+
+section.Content{
+  padding: 1rem;
+}

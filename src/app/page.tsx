@@ -57,7 +57,26 @@ export default function Home() {
       </Hero>
       <CodeExample />
       <HeroFeatures />
-      <Stats />
+      <Stats
+        stats={[
+          {
+            title: "Bundle Size",
+            value: "2.3kb",
+          },
+          {
+            title: "Bundle Size (GZIP)",
+            value: "961b",
+          },
+          {
+            title: "Runtime interpolations",
+            value: "Zero",
+          },
+          {
+            title: "Variants",
+            value: "∞",
+          },
+        ]}
+      />
       <Footer />
     </Container>
   );
