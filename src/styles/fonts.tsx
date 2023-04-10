@@ -16,8 +16,3 @@ export const UBUNTU = Ubuntu({
 });
 
 export const fontClasses = [NOTO_SANS.variable, UBUNTU.variable].join(" ");
-
-// Now import fontClasses into the layout, and add the class to the body
-// (```<body className={fontClasses}>{children}</body>```).
-
-// This will allow you to use ```var(--font-name)``` in CSS files.

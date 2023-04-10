@@ -24,8 +24,6 @@ export const getAllFrontmatter = (fromPath: string) => {
     .map((filePath) => {
       const source = fs.readFileSync(path.join(filePath), "utf8");
       const { data } = matter(source);
-      // const { data, content } = matter(source);
-
       return {
         ...(data as Frontmatter),
         slug: path.basename(filePath).replace(".mdx", ""),
@@ -54,7 +52,6 @@ export const getAllDocsCategories = () => {
 };
 
 export const getMdxBySlug = async (basePath: string, slug: string) => {
-  // console.log("HERE!!!!", basePath, slug);
   const mdxPath = path.join(DATA_PATH, basePath, `${slug}.mdx`);
   if (!fs.existsSync(mdxPath)) return;
 
@@ -62,18 +59,6 @@ export const getMdxBySlug = async (basePath: string, slug: string) => {
     path.join(DATA_PATH, basePath, `${slug}.mdx`),
     "utf8"
   );
-  // const { frontmatter, code } = await bundleMDX(source, {
-  //   xdmOptions(input, options) {
-  //     options.remarkPlugins = [...(options.remarkPlugins ?? []), remarkSlug];
-  //     options.rehypePlugins = [
-  //       ...(options.rehypePlugins ?? []),
-  //       rehypeMetaAttribute,
-  //       rehypeHighlightCode,
-  //     ];
-
-  //     return options;
-  //   },
-  // });
 
   const { frontmatter, code } = await bundleMDX({ source });
 
@@ -81,8 +66,6 @@ export const getMdxBySlug = async (basePath: string, slug: string) => {
     frontmatter: {
       ...(frontmatter as Frontmatter),
       slug,
-      // wordCount: code.split(/\s+/g).length,
-      // readingTime: readingTime(code),
     } as Frontmatter,
     code,
   };
