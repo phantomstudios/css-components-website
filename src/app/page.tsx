@@ -2,6 +2,8 @@ import { GoArrowRight, GoMarkGithub } from "react-icons/go";
 import Link from "next/link";
 import Image from "next/image";
 
+import { getPackageVersion } from "@/services/npm";
+import { codeExample, features, githubLink, stats } from "@/content/static";
 import { getAllDocsCategories } from "@/content";
 import Stats from "@/components/Stats";
 import HeroFeatures from "@/components/HeroFeatures";
@@ -9,12 +11,13 @@ import Footer from "@/components/Footer";
 import CodeExample from "@/components/CodeExample";
 import CodeClipboard from "@/components/CodeClipboard";
 
-import { Container, Hero } from "./styles";
+import { Container, Hero, Version } from "./styles";
 
 const categories = getAllDocsCategories();
 const first = categories[0].docs[0];
 
-export default function Home() {
+export default async function Home() {
+  const version = await getPackageVersion("@phntms/css-components");
   return (
     <Container>
       <Hero id="hero">
@@ -43,40 +46,20 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <a
-              href="https://www.github.com/phantomstudios/css-components"
-              rel="external noreferrer"
-              target="_blank"
-            >
+            <Link href={githubLink} rel="external noreferrer" target="_blank">
               <GoMarkGithub />
               GitHub
-            </a>
+            </Link>
           </li>
         </ul>
         <CodeClipboard text="npm i @phntms/css-components" />
+        <Version>
+          Currently <strong>v{version}</strong>
+        </Version>
       </Hero>
-      <CodeExample />
-      <HeroFeatures />
-      <Stats
-        stats={[
-          {
-            title: "Bundle Size",
-            value: "2.3kb",
-          },
-          {
-            title: "Bundle Size (GZIP)",
-            value: "961b",
-          },
-          {
-            title: "Runtime interpolations",
-            value: "Zero",
-          },
-          {
-            title: "Variants",
-            value: "∞",
-          },
-        ]}
-      />
+      <CodeExample {...codeExample} />
+      <HeroFeatures features={features} />
+      <Stats stats={stats} />
       <Footer />
     </Container>
   );

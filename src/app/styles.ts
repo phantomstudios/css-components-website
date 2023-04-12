@@ -18,3 +18,7 @@ export const Container = styled("div", {
 export const Hero = styled("main", {
   css: css.Hero,
 });
+
+export const Version = styled("p", {
+  css: css.Version,
+});
