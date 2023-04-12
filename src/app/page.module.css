@@ -10,7 +10,7 @@ div.Container_hasBackground_true {
 }
 
 main.Hero {
-  padding: 4em;
+  padding: 4em 3rem;
   display: flex;
   gap: 2rem;
   flex-direction: column;
@@ -19,6 +19,12 @@ main.Hero {
   color: var(--color-fg);
 }
 
+@media (min-width: 768px) {
+  main.Hero {
+    padding: 4em;
+  }
+}
+  
 main.Hero h1 {
   font-size: 2rem;
   font-style: normal;

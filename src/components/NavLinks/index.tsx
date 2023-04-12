@@ -5,6 +5,8 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
+import { useDocs } from "@/contexts/docs";
+
 import { Docs, List } from "./styles";
 
 interface Doc {
@@ -21,6 +23,7 @@ interface Props {
 
 const NavLinks = ({ categories }: Props) => {
   const pathName = usePathname();
+  const { setOpen } = useDocs();
 
   return (
     <>
@@ -30,7 +33,14 @@ const NavLinks = ({ categories }: Props) => {
           <Docs>
             {category.docs.map((doc, i) => (
               <List active={pathName?.endsWith(doc.slug)} key={i}>
-                <Link href={`/docs/${doc.slug}`}>{doc.title}</Link>
+                <Link
+                  href={`/docs/${doc.slug}`}
+                  onClick={() => {
+                    setOpen(false);
+                  }}
+                >
+                  {doc.title}
+                </Link>
               </List>
             ))}
           </Docs>
