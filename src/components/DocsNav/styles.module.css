@@ -30,7 +30,7 @@ div.DocsNavTopbar {
   div.DocsNavWrapper {
     display: block;
     position: fixed;
-    padding: 32px;
+    padding: 4rem 32px;
     top: 0;
     left: 0;
     width: 256px;
@@ -41,5 +41,11 @@ div.DocsNavTopbar {
 
   div.DocsNavTopbar {
     display: none;
+  }
+}
+
+@media (min-width: 1180px) {
+  div.DocsNavWrapper {
+    padding-top: 5rem;
   }
 }
