@@ -1,5 +1,5 @@
 main.DocWrapper {
-  padding: 0 4rem 4rem;
+  padding: 0 2rem 4rem;
 }
 
 main.DocWrapper > h1,
@@ -11,7 +11,7 @@ main.DocWrapper > h4 {
 }
 
 main.DocWrapper > h1 {
-  font-size: 42px;
+  font-size: 36px;
   margin: 2rem 0 0;
   color: var(--color-teal);
 }
@@ -58,10 +58,6 @@ main.DocWrapper pre {
   margin: 0;
 }
 
-/* main.DocWrapper li {
-  line-height: 1.5;
-} */
-
 main.DocWrapper a {
   font-weight: 700;
 }
@@ -72,11 +68,17 @@ main.DocWrapper li > code {
   font-size: 17px;
   color: var(--color-teal);
   background-color: var(--color-teal-transparent);
+  overflow-wrap: break-word;
 }
 
 @media (min-width: 768px) {
   main.DocWrapper {
     margin: 5rem 0;
+    padding: 0 4rem 4rem;
+  }
+
+  main.DocWrapper > h1 {
+    font-size: 42px;
   }
 }
 
