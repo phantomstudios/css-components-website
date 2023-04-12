@@ -2,6 +2,7 @@ import { GoArrowRight, GoMarkGithub } from "react-icons/go";
 import Link from "next/link";
 import Image from "next/image";
 
+import { getPackageVersion } from "@/services/npm";
 import { codeExample, features, githubLink, stats } from "@/content/static";
 import { getAllDocsCategories } from "@/content";
 import Stats from "@/components/Stats";
@@ -10,12 +11,13 @@ import Footer from "@/components/Footer";
 import CodeExample from "@/components/CodeExample";
 import CodeClipboard from "@/components/CodeClipboard";
 
-import { Container, Hero } from "./styles";
+import { Container, Hero, Version } from "./styles";
 
 const categories = getAllDocsCategories();
 const first = categories[0].docs[0];
 
-export default function Home() {
+export default async function Home() {
+  const version = await getPackageVersion("@phntms/css-components");
   return (
     <Container>
       <Hero id="hero">
@@ -51,6 +53,9 @@ export default function Home() {
           </li>
         </ul>
         <CodeClipboard text="npm i @phntms/css-components" />
+        <Version>
+          Currently <strong>v{version}</strong>
+        </Version>
       </Hero>
       <CodeExample {...codeExample} />
       <HeroFeatures features={features} />

@@ -111,3 +111,11 @@ main.Hero ul li a svg {
     margin: 0 auto;
   }
 }
+
+main.Hero p.Version {
+  font-size: 1rem;
+  color: var(--color-grey);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
