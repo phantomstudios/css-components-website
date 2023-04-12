@@ -10,7 +10,7 @@ ul.Categories > li {
 ul.Categories > li h2 {
   font-weight: 700;
   font-size: inherit;
-  margin: 0 0 1em 12px;
+  margin: 0 0 1em;
 }
 
 ul.Categories img {
@@ -32,4 +32,10 @@ ul.Docs li {
 ul.Docs li:hover {
   transform: translateX(2px);
   margin: 0 0 1em 16px;
+}
+
+@media (min-width: 768px) {
+  ul.Categories {
+    margin-top: 2rem;
+  }
 }
