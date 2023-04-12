@@ -2,6 +2,7 @@ import { GoArrowRight, GoMarkGithub } from "react-icons/go";
 import Link from "next/link";
 import Image from "next/image";
 
+import { codeExample, features, githubLink, stats } from "@/content/static";
 import { getAllDocsCategories } from "@/content";
 import Stats from "@/components/Stats";
 import HeroFeatures from "@/components/HeroFeatures";
@@ -43,11 +44,7 @@ export default function Home() {
             </Link>
           </li>
           <li>
-            <a
-              href="https://www.github.com/phantomstudios/css-components"
-              rel="external noreferrer"
-              target="_blank"
-            >
+            <a href={githubLink} rel="external noreferrer" target="_blank">
               <GoMarkGithub />
               GitHub
             </a>
@@ -55,28 +52,9 @@ export default function Home() {
         </ul>
         <CodeClipboard text="npm i @phntms/css-components" />
       </Hero>
-      <CodeExample />
-      <HeroFeatures />
-      <Stats
-        stats={[
-          {
-            title: "Bundle Size",
-            value: "2.3kb",
-          },
-          {
-            title: "Bundle Size (GZIP)",
-            value: "961b",
-          },
-          {
-            title: "Runtime interpolations",
-            value: "Zero",
-          },
-          {
-            title: "Variants",
-            value: "∞",
-          },
-        ]}
-      />
+      <CodeExample {...codeExample} />
+      <HeroFeatures features={features} />
+      <Stats stats={stats} />
       <Footer />
     </Container>
   );
