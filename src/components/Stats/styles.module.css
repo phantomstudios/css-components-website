@@ -5,6 +5,7 @@
   text-align: center;
   margin: 1.5rem auto 1rem;
   max-width: 800px;
+  width: 100%;
 }
 
 .statsWrapper h2 {
