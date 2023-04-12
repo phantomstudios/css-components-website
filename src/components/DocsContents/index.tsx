@@ -6,11 +6,7 @@ import { getAllDocsCategories } from "@/content";
 import { Categories } from "./styles";
 import NavLinks from "../NavLinks";
 
-interface Props {
-  closeNav: () => void;
-}
-
-const DocsContents = ({ closeNav }: Props) => {
+const DocsContents = () => {
   const categories = getAllDocsCategories();
 
   return (
@@ -24,7 +20,7 @@ const DocsContents = ({ closeNav }: Props) => {
         />
       </Link>
       <Categories>
-        <NavLinks categories={categories} closeNav={closeNav} />
+        <NavLinks categories={categories} />
       </Categories>
     </>
   );

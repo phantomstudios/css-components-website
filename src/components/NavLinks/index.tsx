@@ -17,10 +17,9 @@ interface Doc {
 
 interface Props {
   categories: Doc[];
-  closeNav: () => void;
 }
 
-const NavLinks = ({ categories, closeNav }: Props) => {
+const NavLinks = ({ categories }: Props) => {
   const pathName = usePathname();
 
   return (
@@ -31,9 +30,7 @@ const NavLinks = ({ categories, closeNav }: Props) => {
           <Docs>
             {category.docs.map((doc, i) => (
               <List active={pathName?.endsWith(doc.slug)} key={i}>
-                <Link href={`/docs/${doc.slug}`} onClick={closeNav}>
-                  {doc.title}
-                </Link>
+                <Link href={`/docs/${doc.slug}`}>{doc.title}</Link>
               </List>
             ))}
           </Docs>
