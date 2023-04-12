@@ -6,6 +6,7 @@ import Image from "next/image";
 
 import { ParentProps } from "@/types/base";
 import HamburgerIcon from "@/icons/Hamburger.svg";
+import DocsContents from "@/components/DocsContents";
 
 import { DocsNavToggle, DocsNavTopbar, DocsNavWrapper } from "./styles";
 
@@ -19,7 +20,10 @@ const DocsNav = ({ children }: ParentProps) => {
           <Image src={HamburgerIcon} alt="Toggle navigation" />
         </DocsNavToggle>
       </DocsNavTopbar>
-      <DocsNavWrapper open={open}>{children}</DocsNavWrapper>
+      <DocsNavWrapper open={open}>
+        <DocsContents closeNav={() => setOpen(false)} />
+        {children}
+      </DocsNavWrapper>
     </>
   );
 };
