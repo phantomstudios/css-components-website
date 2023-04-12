@@ -46,10 +46,10 @@ export default async function Home() {
             </Link>
           </li>
           <li>
-            <a href={githubLink} rel="external noreferrer" target="_blank">
+            <Link href={githubLink} rel="external noreferrer" target="_blank">
               <GoMarkGithub />
               GitHub
-            </a>
+            </Link>
           </li>
         </ul>
         <CodeClipboard text="npm i @phntms/css-components" />
