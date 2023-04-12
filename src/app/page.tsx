@@ -29,11 +29,11 @@ export default async function Home() {
           unoptimized
         />
         <h1>
-          Componentize
+          Clean and logical
           <br />
-          your CSS styles
+          React styling with
           <br />
-          <span>the right way</span>
+          <span>CSS Components</span>
         </h1>
         <p>
           Not another styling system, but a lightweight utility to compose CSS
