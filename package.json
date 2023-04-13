@@ -15,7 +15,6 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@next/font": "^13.3.0",
     "@phntms/css-components": "^0.4.0",
     "@phntms/react-share": "^1.0.1",
     "@types/node": "^18.15.11",
