@@ -15,31 +15,31 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@next/font": "^13.2.1",
-    "@phntms/css-components": "^0.2.0",
+    "@next/font": "^13.3.0",
+    "@phntms/css-components": "^0.4.0",
     "@phntms/react-share": "^1.0.1",
-    "@types/node": "18.11.9",
-    "@types/react": "18.0.25",
-    "@types/react-dom": "18.0.9",
-    "eslint": "^8.28.0",
-    "eslint-config-next": "^13.2.1",
-    "glob": "^8.0.3",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.35",
+    "@types/react-dom": "^18.0.11",
+    "eslint": "^8.38.0",
+    "eslint-config-next": "^13.3.0",
+    "glob": "^10.0.0",
     "gray-matter": "^4.0.3",
-    "mdx-bundler": "^9.0.1",
-    "next": "^13.2.1",
-    "next-sitemap": "^3.1.55",
+    "mdx-bundler": "^9.2.1",
+    "next": "^13.3.0",
+    "next-sitemap": "^4.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
+    "react-icons": "^4.8.0",
     "react-syntax-highlighter": "^15.5.0",
-    "typescript": "4.9.3"
+    "typescript": "^5.0.4"
   },
   "devDependencies": {
-    "@types/react-syntax-highlighter": "^15.5.5",
-    "@typescript-eslint/eslint-plugin": "^5.44.0",
-    "eslint-config-prettier": "^8.5.0",
+    "@types/react-syntax-highlighter": "^15.5.6",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.8.0"
+    "prettier": "^2.8.7"
   }
 }
