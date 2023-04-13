@@ -3,7 +3,7 @@ import fs from "fs";
 
 import { bundleMDX } from "mdx-bundler";
 import matter from "gray-matter";
-import glob from "glob";
+import { glob } from "glob";
 
 import { sortByIndex } from "@/utils/array";
 import type { Frontmatter } from "@/types/frontmatter";
