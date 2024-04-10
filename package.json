@@ -15,7 +15,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@phantomstudios/cssdios/css-components": "^0.4.0",
+    "@phantomstudios/css-components": "^0.4.0",
     "@phntms/react-share": "^1.0.1",
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.35",
