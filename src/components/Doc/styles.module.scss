@@ -1,5 +1,18 @@
 main.DocWrapper {
   padding: 0 2rem 4rem;
+  color: #bbb;
+
+  blockquote {
+    margin: 0;
+    padding: 24px;
+    color: #bbb;
+    border-radius: 4px;
+    background-color: var(--color-bg-light);
+
+    p {
+      margin: 0;
+    }
+  }
 }
 
 main.DocWrapper > h1,
@@ -33,9 +46,8 @@ main.DocWrapper > hr {
 }
 
 main.DocWrapper > p {
-  font-size: 17px;
+  font-size: 16px;
   color: #bbb;
-  line-height: 2;
 }
 
 main.DocWrapper > ul {
@@ -60,6 +72,13 @@ main.DocWrapper pre {
 
 main.DocWrapper a {
   font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: 0.2s;
+
+  &:hover {
+    color: #eee;
+  }
 }
 
 /* This styles inline code (i.e. NOT the MDXComponents/code component). */
