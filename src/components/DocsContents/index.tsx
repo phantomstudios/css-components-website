@@ -3,8 +3,8 @@ import Image from "next/image";
 
 import { getAllDocsCategories } from "@/content";
 
-import { Categories } from "./styles";
 import NavLinks from "../NavLinks";
+import { Categories } from "./styles";
 
 const DocsContents = () => {
   const categories = getAllDocsCategories();

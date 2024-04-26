@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { styled } from "@phntms/css-components";
+import { styled } from "@phantomstudios/css-components";
 
 import css from "./styles.module.css";
 

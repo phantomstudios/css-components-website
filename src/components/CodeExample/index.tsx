@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import { CodeExampleWrapper, CodeSections, CodeSection } from "./styles";
 import Code, { range } from "../MDXComponents/Code";
+import { CodeExampleWrapper, CodeSections, CodeSection } from "./styles";
 
 export interface CodeSection {
   title: string;

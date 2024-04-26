@@ -14,7 +14,7 @@ interface Props {
 
 export async function generateMetadata({ params }: Props) {
   const doc = await getMdxBySlug("docs", params.slug);
-  if (doc) return { title: doc?.frontmatter.title };
+  return { title: doc ? doc?.frontmatter.title : "CSS Components" };
 }
 
 export default async function Docs({ params }: Props) {
