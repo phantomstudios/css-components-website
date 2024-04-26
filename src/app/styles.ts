@@ -1,4 +1,4 @@
-import { styled } from "@phntms/css-components";
+import { styled } from "@phantomstudios/css-components";
 
 import css from "./page.module.css";
 

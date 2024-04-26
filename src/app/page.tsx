@@ -17,7 +17,7 @@ const categories = getAllDocsCategories();
 const first = categories[0].docs[0];
 
 export default async function Home() {
-  const version = await getPackageVersion("@phntms/css-components");
+  const version = await getPackageVersion("@phantomstudios/css-components");
   return (
     <Container>
       <Hero id="hero">
@@ -52,7 +52,7 @@ export default async function Home() {
             </Link>
           </li>
         </ul>
-        <CodeClipboard text="npm i @phntms/css-components" />
+        <CodeClipboard text="npm i @phantomstudios/css-components" />
         <Version>
           Currently <strong>v{version}</strong>
         </Version>
