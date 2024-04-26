@@ -12,11 +12,11 @@ export const Container = styled("div", {
       true: css.Container_hasBackground_true,
     },
   },
-  defaultVariants: {},
 });
 
 export const Hero = styled("main", {
   css: css.Hero,
+  passthrough: ["id"],
 });
 
 export const Version = styled("p", {
