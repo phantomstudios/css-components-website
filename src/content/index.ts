@@ -57,7 +57,7 @@ export const getMdxBySlug = async (basePath: string, slug: string) => {
 
   const source = fs.readFileSync(
     path.join(DATA_PATH, basePath, `${slug}.mdx`),
-    "utf8"
+    "utf8",
   );
 
   const { frontmatter, code } = await bundleMDX({ source });
