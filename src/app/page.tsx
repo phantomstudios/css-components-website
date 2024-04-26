@@ -1,4 +1,5 @@
-import { GoArrowRight, GoMarkGithub } from "react-icons/go";
+import { GoArrowRight } from "react-icons/go";
+import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -47,7 +48,7 @@ export default async function Home() {
           </li>
           <li>
             <Link href={githubLink} rel="external noreferrer" target="_blank">
-              <GoMarkGithub />
+              <FaGithub />
               GitHub
             </Link>
           </li>
