@@ -33,11 +33,6 @@ li.statCard {
   width: 240px;
   height: 200px;
   background-color: var(--color-bg-dark);
-  transition: 0.2s;
-}
-
-li.statCard:hover {
-  background-color: var(--color-bg-darker);
 }
 
 li.statCard h3 {
