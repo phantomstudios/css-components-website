@@ -7,7 +7,7 @@ div.Container {
 
 div.Container_hasBackground_true {
   background-color: var(--color-bg);
-  background-image: radial-gradient(var(--color-fg) 0, var(--color-bg) 0.8px);
+  background-image: radial-gradient(#fff4 0, var(--color-bg) 1px);
   background-size: 12px 12px;
 }
 
@@ -123,7 +123,8 @@ main.Hero ul li a svg {
 
 main.Hero p.Version {
   font-size: 1rem;
-  color: var(--color-grey);
+  color: var(--color-fg);
+  opacity: 0.25;
   margin: 0;
   padding: 0;
   text-align: center;
