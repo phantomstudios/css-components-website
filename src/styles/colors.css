@@ -2,6 +2,10 @@
 *::after,
 *::before {
   --color-fg: #fafafa;
+  --color-fg-dark: #e9e9e9;
+  --color-fg-darker: #bbb;
+  --color-fg-darkest: #666;
+  --color-bg-light: #2a2e36;
   --color-bg: #21252b;
   --color-bg-dark: #070a1144;
   --color-bg-darker: #070a1188;
