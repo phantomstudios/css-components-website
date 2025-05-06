@@ -7,17 +7,19 @@ import Doc from "@/components/Doc";
 import { Container } from "@/app/styles";
 
 interface Props {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata(props: Props) {
+  const params = await props.params;
   const doc = await getMdxBySlug("docs", params.slug);
   return { title: doc ? doc?.frontmatter.title : "CSS Components" };
 }
 
-export default async function Docs({ params }: Props) {
+export default async function Docs(props: Props) {
+  const params = await props.params;
   const doc = await getMdxBySlug("docs", params.slug);
   if (!doc) return notFound();
 
