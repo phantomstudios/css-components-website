@@ -48,7 +48,7 @@ main.Hero h1 a:active {
 
 main.Hero p {
   text-align: center;
-  color: #999;
+  color: var(--color-fg-darkest);
   margin: 0;
   padding-bottom: 2rem;
 }
