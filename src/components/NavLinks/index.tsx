@@ -32,16 +32,15 @@ const NavLinks = ({ categories }: Props) => {
           <h2>{category.title}</h2>
           <Docs>
             {category.docs.map((doc, i) => (
-              <List active={pathName?.endsWith(doc.slug)} key={i}>
-                <Link
-                  href={`/docs/${doc.slug}`}
-                  onClick={() => {
-                    setOpen(false);
-                  }}
-                >
-                  {doc.title}
-                </Link>
-              </List>
+              <Link
+                key={i}
+                href={`/docs/${doc.slug}`}
+                onClick={() => {
+                  setOpen(false);
+                }}
+              >
+                <List active={pathName?.endsWith(doc.slug)}>{doc.title}</List>
+              </Link>
             ))}
           </Docs>
         </li>
