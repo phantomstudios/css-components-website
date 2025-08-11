@@ -52,13 +52,13 @@ export const getAllDocsCategories = () => {
 };
 
 export const getMdxBySlug = async (basePath: string, slug: string) => {
-  const mdxPath = path.join(DATA_PATH, basePath, `${slug}.mdx`);
+  // Construct and resolve the path to prevent path traversal
+  const mdxPath = path.resolve(DATA_PATH, basePath, `${slug}.mdx`);
+  // Ensure the resolved path is within DATA_PATH
+  if (!mdxPath.startsWith(DATA_PATH + path.sep)) return;
   if (!fs.existsSync(mdxPath)) return;
 
-  const source = fs.readFileSync(
-    path.join(DATA_PATH, basePath, `${slug}.mdx`),
-    "utf8",
-  );
+  const source = fs.readFileSync(mdxPath, "utf8");
 
   const { frontmatter, code } = await bundleMDX({ source });
 
