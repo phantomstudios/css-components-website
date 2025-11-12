@@ -20,7 +20,7 @@ const first = categories[0].docs[0];
 export default async function Home() {
   const version = await getPackageVersion("@phantomstudios/css-components");
   return (
-    <Container>
+    <Container hasBackground>
       <Hero id="hero">
         <Image
           src="/logo.svg"
