@@ -24,10 +24,10 @@
     "glob": "^11.1.0",
     "gray-matter": "^4.0.3",
     "mdx-bundler": "^10.0.2",
-    "next": "^16.0.3",
+    "next": "^16.0.7",
     "next-sitemap": "^4.2.3",
-    "react": "^19.1.0",
-    "react-dom": "^19.2.0",
+    "react": "^19.1.2",
+    "react-dom": "^19.1.2",
     "react-icons": "^5.5.0",
     "react-syntax-highlighter": "^15.6.1",
     "typescript": "^5.4.5"
