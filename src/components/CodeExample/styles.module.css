@@ -18,6 +18,7 @@ ul.CodeSections {
 
 li.CodeSection {
   margin: 0 -1rem;
+  backdrop-filter: blur(1px);
   border: 2px solid var(--color-grey);
   border-radius: 4px;
   transition: all 0.3s ease-in-out;

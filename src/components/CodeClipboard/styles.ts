@@ -1,6 +1,6 @@
 import { styled } from "@phantomstudios/css-components";
 
-import css from "./styles.module.css";
+import css from "./styles.module.scss";
 
 export const CodeClipboardWrapper = styled("span", {
   css: css.CodeClipboard,
