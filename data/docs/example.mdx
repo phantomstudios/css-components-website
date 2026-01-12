@@ -1,5 +1,5 @@
 ---
-title: Full Component Example
+title: Example Component
 description: A full example of a component using CSS Components.
 category: Getting Started
 index: 16
@@ -7,24 +7,30 @@ index: 16
 
 Below is a full example of a basic component put together using CSS Components.
 
-A component will be split into 3 files:
-
 ```bash
 src
 └── components
     └── Panel
         ├── index.tsx # The main component file
         ├── styles.module.css # The CSS file
-        └── styles.tsx # The CSS Components file)
+        └── styles.ts # The CSS Components file
+    ├── SomeOtherComponent
+    └── SomeOtherComponent
 ```
 
-We are going to create a simple `Panel` component that has a title and some content. The component will have a `wide` prop that will make the panel fill the width of its container.
+Each component folder can be split into 3 files:
 
-Here you can see the `Panel` component in action.
+- `index.tsx`, your standard React component;
+- `styles.module.css`, your standard CSS styles; and
+- `styles.ts`, which bridges the gap between the two.
+
+Let's create a simple `Panel` component with a title and some content. The component will have a `wide` variant that will make the panel fill the width of its container.
+
+Here it is in action:
 
 <Preview>
   <Panel title="Hello World" wide>
-    <p>This is some example content. It's not very exciting.</p>
+    <p>This is some example content. It's working great! 😄</p>
   </Panel>
 </Preview>
 
@@ -33,16 +39,18 @@ import Panel from "@/components/Panel";
 
 () => (
   <Panel title="Hello World" wide>
-    <p>This is some example content. It's not very exciting.</p>
+    <p>This is some example content. It's working great! 😄</p>
   </Panel>
 );
 ```
 
-## panel/index.tsx
+## index.tsx
 
-This is the main component file. It's a simple component that has a title and some content. `PanelWrapper`, `Title` and `Content` are all CSS Components that are imported from `styles.tsx`.
+This is the main component file. It's a simple component with a title and some content.
 
-Notice how this component is free of ugly CSS class names. Everything is symantec.
+If you've used React in any capacity this format should be very familiar to you, with the exception of `PanelWrapper`, `Title` and `Content`. These are all CSS Components that are imported from `styles.ts`.
+
+Note how this component is free of ugly CSS class names. Everything is semantic.
 
 ```tsx
 import { PanelWrapper, Title, Content } from "./styles";
@@ -63,11 +71,49 @@ const Panel = ({ title, children, wide }: Props) => (
 export default Panel;
 ```
 
-## panel/styles.tsx
+## styles.module.css
 
-This is the styles file. It contains the CSS Components that are used in the main component file. As you can see, CSS Components are simply a way to map CSS classes to React component in a logical way, nothing more.
+Next is your bog standard CSS file. It contains all the CSS classes used by CSS Components. You're free to name them how you want, [but we do have a helpful naming convention](/docs/cli).
 
-```tsx
+While this file uses CSS, you can use whatever styling solution you want. We'd recommend using SCSS; it works really well with CSS components!
+
+```css
+div.PanelWrapper {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  width: 240px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #e6e6e6;
+  color: black;
+}
+
+div.PanelWrapper_wide {
+  width: 100%;
+}
+
+h2.Title {
+  background-color: #d6d6d6;
+  margin: 0;
+  padding: 1rem;
+}
+
+section.Content {
+  padding: 1rem;
+}
+```
+
+## styles.ts ✨
+
+The styles file is where the magic happens! It contains all of the CSS Components that are imported into the main React component.
+
+As you can see, CSS Components are nothing more than a way to map CSS classes to React components.
+
+You can either create this file yourself, [or use our helpful CLI tool](/docs/cli).
+
+```ts
 import { styled } from "@phantomstudios/css-components";
 
 import css from "./styles.module.css";
@@ -90,36 +136,8 @@ export const Content = styled("section", {
 });
 ```
 
-Please note that while this example employs standard CSS, you have the freedom to utilize any styling solution of your choice, such as SCSS.
+And that's it!
 
-## panel/styles.module.css
+As you can see, the only thing that's really different from your standard, CSS-Component-less workflow is the `styles.ts` file. Pop that in and you're good to go.
 
-Lastly, this is the bog standard CSS file. It contains the CSS classes that are used in the CSS Components.
-
-```css
-.PanelWrapper {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: auto;
-  width: 240px;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  background-color: #e6e6e6;
-  color: black;
-}
-
-.PanelWrapper_wide {
-  width: 100%;
-}
-
-h2.Title {
-  background-color: #d6d6d6;
-  margin: 0;
-  padding: 1rem;
-}
-
-section.Content {
-  padding: 1rem;
-}
-```
+Happy styling!
