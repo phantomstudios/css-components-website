@@ -24,7 +24,7 @@ export default async function Docs(props: Props) {
   if (!doc) return notFound();
 
   return (
-    <Container sideBar>
+    <Container sideBar hasBackground>
       <Doc doc={doc} />
     </Container>
   );

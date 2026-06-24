@@ -16,11 +16,12 @@ const CodeClipboard = ({ text }: Props) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const copy = () => {
+    // Allows animation to play on mobile
     navigator.clipboard.writeText(text);
     setIsCopied(true);
     setTimeout(() => {
       setIsCopied(false);
-    }, 300);
+    }, 150);
   };
 
   return (
