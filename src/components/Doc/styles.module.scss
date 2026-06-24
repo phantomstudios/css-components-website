@@ -1,11 +1,25 @@
 main.DocWrapper {
   padding: 0 2rem 4rem;
+  color: var(--color-fg-darker);
+
+  blockquote {
+    margin: 0;
+    padding: 24px;
+    color: var(--color-fg-darker);
+    border-radius: 4px;
+    background-color: var(--color-bg-light);
+
+    p {
+      margin: 0;
+    }
+  }
 }
 
 main.DocWrapper > h1,
 main.DocWrapper > h2,
 main.DocWrapper > h3,
 main.DocWrapper > h4 {
+  color: var(--color-fg);
   margin: 2em 0 0.25em 0;
   font-weight: 700;
 }
@@ -33,9 +47,8 @@ main.DocWrapper > hr {
 }
 
 main.DocWrapper > p {
-  font-size: 17px;
-  color: #bbb;
-  line-height: 2;
+  color: var(--color-fg-darker);
+  line-height: 1.5;
 }
 
 main.DocWrapper > ul {
@@ -45,7 +58,7 @@ main.DocWrapper > ul {
 p.Description {
   font-size: 22px;
   font-style: italic;
-  color: #777;
+  color: var(--color-fg-darkest);
 
   margin: 0 0 2em;
 }
@@ -60,6 +73,13 @@ main.DocWrapper pre {
 
 main.DocWrapper a {
   font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--color-fg-dark);
+  }
 }
 
 /* This styles inline code (i.e. NOT the MDXComponents/code component). */

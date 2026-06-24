@@ -9,6 +9,6 @@ button.CheckoutButtonWrapper {
 }
 
 button.CheckoutButtonWrapper:hover {
-  background-color: #00000044;
+  background-color: var(--color-bg-darker);
   color: white;
 }

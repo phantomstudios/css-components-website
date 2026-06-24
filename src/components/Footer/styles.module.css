@@ -4,7 +4,7 @@ footer.FooterWrapper {
   align-items: center;
   padding: 6rem;
 
-  color: #666;
+  color: var(--color-fg-darkest);
   text-align: center;
 }
 
