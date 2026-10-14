@@ -6,6 +6,7 @@ export const NOTO_SANS = Noto_Sans({
   weight: ["400", "600"],
   subsets: ["latin"],
   fallback: ["sans-serif"],
+  display: "swap",
 });
 
 export const UBUNTU = Ubuntu({
@@ -13,6 +14,7 @@ export const UBUNTU = Ubuntu({
   weight: ["400", "700"],
   subsets: ["latin"],
   fallback: ["sans-serif"],
+  display: "swap",
 });
 
 export const fontClasses = [NOTO_SANS.variable, UBUNTU.variable].join(" ");
