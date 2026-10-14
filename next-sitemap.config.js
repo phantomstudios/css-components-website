@@ -10,4 +10,5 @@ const siteUrl =
 module.exports = {
   siteUrl,
   generateIndexSitemap: true, //single sitemap
+  generateRobotsTxt: true,
 };
