@@ -28,7 +28,11 @@ const Footer = () => {
       </FooterLogos>
       <p>
         CSS Components was made with ❤️ at
-        <Link href="https://www.phantom.land" target="_blank">
+        <Link
+          href="https://www.phantom.land"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Phantom.land
         </Link>
       </p>
