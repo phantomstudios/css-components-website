@@ -1,8 +1,6 @@
 "use client";
 
-import { setTimeout } from "timers";
-
-import { useState } from "react";
+import { useState, type KeyboardEvent } from "react";
 
 import { BiCopy } from "react-icons/bi";
 
@@ -23,9 +21,23 @@ const CodeClipboard = ({ text }: Props) => {
     }, 300);
   };
 
+  const handleKeyDown = (event: KeyboardEvent<HTMLSpanElement>) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      copy();
+    }
+  };
+
   return (
-    <CodeClipboardWrapper copied={isCopied} onClick={copy}>
-      {text} <BiCopy />
+    <CodeClipboardWrapper
+      role="button"
+      tabIndex={0}
+      aria-label="Copy install command to clipboard"
+      copied={isCopied}
+      onClick={copy}
+      onKeyDown={handleKeyDown}
+    >
+      {text} <BiCopy aria-hidden="true" />
     </CodeClipboardWrapper>
   );
 };
